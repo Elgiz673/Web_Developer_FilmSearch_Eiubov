@@ -1,0 +1,1070 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff url("../assets/images/fallback/bg-mobile-header.png") no-repeat top center;
+  background-size: cover;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  font-size: 0px;
+  background: #ffffff;
+  overflow: hidden;
+  padding-bottom: 0;
+  /* Убираем белую полосу под футером в мобильной версии */
+}
+
+.watch-today {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 259px;
+  height: 88px;
+  margin: 455px 0 0 30px;
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-align: left;
+  z-index: 23;
+}
+
+.vector {
+  position: relative;
+  display: block;
+  width: 28.5px;
+  height: 13.887px;
+  margin: 36px 0 0 167px;
+  background: url(../assets/icons/arrows/Vector5345.svg) no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+
+.flex-row-eb {
+  position: relative;
+  /* На узких экранах блок плавно ужимается, чтобы стрелки оставались видимыми. */
+  width: 263.2px;
+  max-width: 323px;
+  height: 481.59px;
+  /* 86px заголовок + 28px отступ + 367.59px карточка */
+  margin: -12px auto 0;
+  z-index: 26;
+}
+
+.mobile-card-title {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, var(--default-font-family);
+  font-size: 21.7px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  white-space: pre-line;
+  position: absolute;
+  left: 14.08px;
+  right: 20.04px;
+  bottom: 67.37px;
+  z-index: 27;
+  pointer-events: none;
+}
+
+.movie-card {
+  position: absolute;
+  width: 263.2px;
+  height: 367.59px;
+  top: 114px;
+  /* 86px заголовок + 28px отступ */
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  /* Убираем чёрные поля по бокам: постер должен заполнять карточку */
+  background-size: cover;
+  background-color: #010101;
+  z-index: 24;
+  overflow: hidden;
+}
+
+.movie-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, rgba(1, 1, 1, 0) 25%, rgba(1, 1, 1, 0) 70%, #010101 100%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.vector-1 {
+  position: absolute;
+  width: 19px;
+  height: 30px;
+  top: 298px;
+  /* 114px + 184px по макету до верхней границы стрелки */
+  left: -35px;
+  background: url(../assets/icons/arrows/arrow-left.png) no-repeat center;
+  background-size: contain;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 26;
+}
+
+.vector-2 {
+  position: absolute;
+  width: 19px;
+  height: 30px;
+  top: 298px;
+  /* 114px + 184px по макету до верхней границы стрелки */
+  left: 279px;
+  right: auto;
+  background: url(../assets/icons/arrows/arrow-right.svg) no-repeat center;
+  background-size: contain;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 25;
+}
+
+/* По макету: в светлой теме стрелка вправо чёрная, в тёмной — белая */
+body:not(.dark-theme) .vector-2 {
+  filter: invert(1);
+}
+
+body.dark-theme .vector-2 {
+  filter: none;
+}
+
+.rectangle {
+  position: relative;
+  width: 100%;
+  height: 303px;
+  margin: 86.406px 0 0 0;
+  background: url("../assets/images/fallback/bg-search-section.png") no-repeat center;
+  background-size: cover;
+  z-index: 13;
+  overflow: visible auto;
+}
+
+.rectangle-3 {
+  position: relative;
+  width: min(313.939px, calc(100vw - 20px));
+  height: 50.671px;
+  margin: 126px auto 0;
+  background: url(../assets/images/mobile-search-field.png) no-repeat center;
+  background-size: cover;
+  background-color: #ffffff;
+  border-radius: 50.452px;
+  box-shadow: 0 0 25.226px rgba(0, 0, 0, 0.2);
+  z-index: 15;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 5.045px;
+  position: absolute;
+  width: 87px;
+  height: 39px;
+  top: 6px;
+  left: auto;
+  right: 6px;
+  padding: 12.613px 32.794px;
+  background: #020202;
+  z-index: 18;
+  overflow: hidden;
+  border-radius: 50.452px;
+}
+
+.find {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 40px;
+  height: 16px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 19;
+}
+
+.what-to-watch {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 16px;
+  top: 17.558px;
+  left: calc(50% - 121.09px);
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15.733px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 16;
+}
+
+.magnifying-glass {
+  position: absolute;
+  width: 15.422px;
+  height: 15.422px;
+  top: 17.625px;
+  left: 13.523px;
+  background: url("../assets/images/magnifying-glass 1.svg") no-repeat center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 17;
+}
+
+.open-world-cinema {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 237px;
+  height: 93px;
+  margin: 44px 0 0 29px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 31.2px;
+  text-align: left;
+  z-index: 22;
+}
+
+.movie-guide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 294px;
+  height: 288px;
+  margin: 20px 0 0 29px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24.3px;
+  text-align: left;
+  z-index: 21;
+}
+
+.footer-mobile {
+  position: relative;
+  width: 100%;
+  height: 186px;
+  margin: 138px 0 0 0;
+  font-size: 0px;
+  /* Футер выше декоративной подложки. */
+  z-index: 10;
+  overflow: hidden;
+}
+
+.copyright {
+  display: block;
+  position: relative;
+  height: 16.454px;
+  margin: 113.225px 0 0 30px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 16.454px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.group {
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 14.699px;
+  position: relative;
+  width: 122px;
+  height: 17.885px;
+  margin: 40px 0 0 30px;
+  z-index: 4;
+}
+
+.telegram {
+  flex-shrink: 0;
+  position: relative;
+  width: 17.639px;
+  height: 19.843px;
+  background: url(../assets/icons/telegram.svg) no-repeat center !important;
+  background-size: cover;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.vk-fill {
+  flex-shrink: 0;
+  position: relative;
+  width: 25.723px;
+  height: 24.988px;
+  background: url(../assets/icons/vk-fill.svg) no-repeat center !important;
+  background-size: cover;
+  z-index: 6;
+  overflow: hidden;
+}
+
+.zen-logo-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 14.699px;
+  height: 15.434px;
+  background: url(../assets/icons/zen-logo.svg) no-repeat center !important;
+  background-size: cover;
+  z-index: 7;
+  overflow: hidden;
+}
+
+.youtube-logo {
+  flex-shrink: 0;
+  position: relative;
+  width: 19.843px;
+  height: 15.434px;
+  background: url(../assets/icons/youtube-logo.svg) no-repeat center !important;
+  background-size: cover;
+  z-index: 8;
+  overflow: hidden;
+}
+
+/* На хостинге иконки могут приходить тёмными из-за кэша/старого ассета.
+   Принудительно делаем их белыми на чёрном фоне футера. */
+.footer-mobile .social-media a,
+.footer-mob .social-media a,
+.footer-mobile .social-media a:hover,
+.footer-mobile .social-media a:focus,
+.footer-mobile .social-media a:active,
+.footer-mob .social-media a:hover,
+.footer-mob .social-media a:focus,
+.footer-mob .social-media a:active {
+  filter: brightness(0) invert(1) !important;
+}
+
+.rectangle-4 {
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  top: 0;
+  left: 0;
+  background: #121212;
+  z-index: 3;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 615px;
+  top: 0;
+  left: 0;
+  background: url("../assets/images/fallback/bg-mobile-header.png") no-repeat center;
+  background-size: cover;
+}
+
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/mobile-menu.png) no-repeat center;
+  background-size: cover;
+  z-index: 10;
+}
+
+.rectangle-5 {
+  position: absolute;
+  width: 100%;
+  height: 584px;
+  top: 1451px;
+  left: 0;
+  background: url("../assets/images/fallback/bg-home-main-mobile.png") no-repeat center;
+  background-size: cover;
+  /* Декоративная подложка не перекрывает футер и клики. */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== Кликабельность и форма ===== */
+
+/* Даём ссылкам блочную модель, чтобы область клика совпадала с иконкой. */
+.social-media a {
+  display: block;
+  transition: none !important;
+}
+
+/* Мобильный макет: у иконок соцсетей в футере нет hover-состояния */
+.footer-mobile .social-media a:hover,
+.footer-mobile .social-media a:focus,
+.footer-mobile .social-media a:active {
+  background: none !important;
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* На мобильном макете класс hovered также не должен давать эффект. */
+.social-media a.hovered {
+  background: none !important;
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Реальная форма поверх визуального поля */
+.rectangle-3 {
+  position: relative;
+}
+
+.rectangle-3 .search-form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.rectangle-3 .search-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  background: transparent;
+  /* По макету оставляем место справа под кнопку "Найти". */
+  padding: 17.56px 104.06px 17.11px 35.88px;
+  color: rgba(1, 1, 1, 1);
+  font-family: Inter, var(--default-font-family);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.rectangle-3 .search-input::placeholder {
+  color: rgba(1, 1, 1, 1);
+  opacity: 1;
+}
+
+.rectangle-3 .magnifying-glass {
+  pointer-events: none;
+}
+
+/* Кнопка поиска стилизуется как декоративный блок из макета (без UA-стилей браузера) */
+.rectangle-3 .frame {
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+}
+
+/* Прозрачные зоны-ссылки (поверх картинки мобильного меню) */
+.mobile-home-link,
+.mobile-films-link,
+.mobile-series-link {
+  position: absolute;
+  top: 0;
+  height: 65px;
+  z-index: 999;
+  display: block;
+}
+
+.mobile-home-link {
+  left: 0;
+  width: 61.111%;
+}
+
+.mobile-films-link {
+  left: 61.111%;
+  width: 19.444%;
+}
+
+.mobile-series-link {
+  left: 80.555%;
+  width: 19.444%;
+}
+
+/* Для кнопок стрелок убираем UA-стили, чтобы сохранить вид макета */
+button.vector-1,
+button.vector-2 {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Постер должен заполнять карточку полностью, без чёрных полей */
+.movie-card.poster-fit-cover,
+.movie-card-b.poster-fit-cover,
+.card-film.poster-fit-cover {
+  background-size: cover !important;
+}
+
+/* ===== МОБИЛЬНОЕ БУРГЕР-МЕНЮ ===== */
+
+:root {
+  /* Половина ширины базового мобильного фрейма, но не больше 50vw. */
+  --mobile-frame-half: min(180px, 50vw);
+}
+
+.burger-hit {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 64px;
+  height: 65px;
+  /* Hit-area совпадает с реальным положением иконки справа. */
+  background: transparent;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  z-index: 3002;
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 4000;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+/* Заголовок "Меню" над панелью (как в макете) */
+.menu-caption {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  align-items: center;
+  gap: 6px;
+  z-index: 4002;
+  pointer-events: none;
+}
+
+.nav-overlay.active+.menu-caption {
+  display: flex;
+}
+
+.menu-caption__text {
+  color: #8f8f8f;
+  font-family: Inter, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+/* Панель меню по мобильному макету должна быть прижата к левой части экрана */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  transform: translateX(-110%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: #000000;
+  z-index: 4001;
+}
+
+.mobile-nav.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Кнопка закрытия X — по центру сверху */
+.mobile-nav__close {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateX(-50%);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.mobile-nav__close::before,
+.mobile-nav__close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: #ffffff;
+  transform-origin: center;
+}
+
+.mobile-nav__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile-nav__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mobile-nav__link {
+  display: block;
+  margin-left: 36px;
+  margin-top: 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.mobile-nav__link:first-of-type {
+  margin-top: 100px;
+}
+
+.mobile-nav__link+.mobile-nav__link {
+  margin-top: 20px;
+}
+
+.mobile-nav__link.is-active {
+  color: #9b9b9b;
+  font-weight: 600;
+  pointer-events: none;
+  cursor: default;
+}
+
+.mobile-nav__spacer {
+  position: absolute;
+  inset: auto 0 90px 0;
+  height: 1px;
+}
+
+/* Тумблер темы (внизу слева в панели меню) */
+.mobile-nav__theme {
+  position: absolute;
+  left: 26px;
+  bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-switch {
+  position: relative;
+  width: 42px;
+  height: 18px;
+}
+
+.theme-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.theme-slider {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border-radius: 999px;
+}
+
+.theme-slider::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #000000;
+  transition: transform 0.2s ease;
+}
+
+.theme-switch input:checked+.theme-slider::after {
+  transform: translateX(24px);
+}
+
+.mobile-nav__theme .theme-label {
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+/* ===== ПЕРЕКЛЮЧЕНИЕ ТЕМЫ В МОБИЛЬНОЙ ВЕРСИИ ===== */
+
+body.dark-theme,
+body.dark-theme .main-container {
+  background: #010101;
+}
+
+/* По мобильному макету в тёмной теме поле поиска становится тёмным */
+body.dark-theme .rectangle-3 {
+  background: #000000;
+}
+
+body.dark-theme .rectangle-3 .search-input,
+body.dark-theme .rectangle-3 .search-input::placeholder {
+  color: #ffffff;
+}
+
+body.dark-theme .magnifying-glass {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+body.dark-theme .mobile-card-title {
+  color: #ffffff;
+}
+
+/* ===== Карточка карусели: рейтинг + затемнение + заголовок ===== */
+
+.movie-card .poster-gradient {
+  position: absolute;
+  /* Параметры слоя затемнения подобраны по макету и заданы в процентах. */
+  left: -1.535%;
+  width: 103.071%;
+  bottom: 0;
+  height: 44.4%;
+  background: url("../assets/images/fallback/bg-card-gradient.png") no-repeat center bottom;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.movie-card .rating-badge {
+  position: absolute;
+  top: 13.56px;
+  left: 13.56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.39px 7.97px;
+  border-radius: 2.712px;
+  background: #3bb33b;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 15.071px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 7;
+}
+
+.movie-card .card-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Сдвигаем заголовок в нижнюю тёмную зону (как на макете) */
+  padding: 0 20px 24px 14px;
+  z-index: 6;
+}
+
+.movie-card .card-content h3 {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, var(--default-font-family);
+  font-style: normal;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: left;
+  white-space: pre-line;
+}
+
+/* ===== Адаптивность мобильной версии ===== */
+
+/* Для маленьких экранов (320px - 360px) */
+@media (max-width: 360px) {
+  .watch-today {
+    width: 259px;
+    font-size: 36px;
+    line-height: normal;
+    margin: 455px 0 0 30px;
+  }
+
+  .vector {
+    margin-left: 167px;
+  }
+
+  .flex-row-eb {
+    width: 263.2px;
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .movie-card {
+    width: 263.2px;
+    height: 367.59px;
+  }
+
+  .rectangle {
+    height: 303px;
+  }
+
+  .rectangle-3 {
+    width: 280px;
+    margin: 120px auto 0;
+  }
+
+  .frame {
+    width: 75px;
+    height: 34px;
+    left: 198px;
+  }
+
+  .find {
+    font-size: 11px;
+  }
+
+  .open-world-cinema {
+    width: 220px;
+    font-size: 22px;
+    line-height: 28px;
+    margin-left: 20px;
+  }
+
+  .movie-guide {
+    width: 270px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-left: 20px;
+  }
+
+  .header {
+    height: 560px;
+  }
+
+  .rectangle-5 {
+    top: 1258px;
+    /* На 360px подложку увеличиваем, чтобы не появлялся зазор перед футером. */
+    height: 720px;
+  }
+}
+
+/* Для средних экранов (361px - 400px) */
+@media (min-width: 361px) and (max-width: 400px) {
+  .watch-today {
+    width: 240px;
+    font-size: 32px;
+    line-height: 39px;
+    margin: 440px 0 0 25px;
+  }
+
+  .flex-row-eb {
+    width: 263.2px;
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .movie-card {
+    width: 263.2px;
+    height: 367.59px;
+    left: 0;
+  }
+
+  /* Для диапазона 361–400px подложку поднимаем чуть выше. */
+  .rectangle-5 {
+    top: 1436px;
+    /* Добавляем высоту, чтобы подложка дотягивалась до футера. */
+    height: 620px;
+  }
+}
+
+/* Для экранов 401px - 430px (iPhone 11 и близкие) */
+@media (min-width: 401px) and (max-width: 430px) {
+  .watch-today {
+    width: 259px;
+    font-size: 36px;
+    line-height: normal;
+    margin: 455px 0 0 30px;
+  }
+
+  .vector {
+    margin-left: 167px;
+  }
+
+  .flex-row-eb {
+    width: 263.2px;
+    max-width: 323px;
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Для экранов с высотой меньше 700px */
+@media (max-height: 700px) {
+  .watch-today {
+    margin-top: 380px;
+  }
+
+  .header {
+    height: 550px;
+  }
+
+  .rectangle-5 {
+    height: 520px;
+  }
+}
+
+/* При малой высоте вьюпорта (клавиатура) подложку корректируем для 361–400px. */
+@media (min-width: 361px) and (max-width: 400px) and (max-height: 700px) {
+  .rectangle-5 {
+    top: 1376px;
+    /* Подложка не должна обрываться до футера. */
+    height: 620px;
+  }
+}
+
+/* При малой высоте вьюпорта корректируем подложку для 401–430px. */
+@media (min-width: 401px) and (max-width: 430px) and (max-height: 700px) {
+  .rectangle-5 {
+    top: 1376px;
+    /* 1543 - 75 */
+    height: 659px;
+    /* 584 + 75 */
+  }
+}
+
+
+
+
+/* Для 360px при малой высоте сохраняем увеличенную высоту подложки. */
+@media (max-width: 360px) and (max-height: 700px) {
+  .rectangle-5 {
+    height: 720px;
+  }
+}
+
+
+/* Улучшения для touch-устройств */
+@media (hover: none) and (pointer: coarse) {
+
+  .vector-1,
+  .vector-2 {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+  }
+
+  .frame {
+    min-height: 44px;
+  }
+
+  .telegram,
+  .vk-fill,
+  .zen-logo-icon,
+  .youtube-logo {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+
+  .mobile-nav__link {
+    padding: 12px 0;
+    min-height: 44px;
+  }
+}
+
+/* Параметры для экранов шире 420px (планшеты в портретной ориентации) */
+@media (min-width: 421px) and (max-width: 768px) {
+  .main-container {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+/* Узкие телефоны (включая 428px): не ограничиваем ширину контейнера */
+@media (max-width: 480px) {
+  .main-container {
+    max-width: 100%;
+    margin: 0;
+  }
+}

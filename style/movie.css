@@ -1,0 +1,1604 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.diplom-logo,
+.telegram,
+.vk-fill,
+.zen-logo,
+.youtube-logo {
+  display: block;
+}
+
+.movies,
+.series {
+  cursor: pointer;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1920px;
+  height: 4304px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+.rectangle {
+  position: relative;
+  width: 1920px;
+  height: 111px;
+  margin: 0 0 0 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.diplom-logo {
+  position: absolute;
+  width: 342px;
+  height: 70px;
+  top: 14px;
+  left: 310px;
+  background: url(../assets/icons/remote/4ZEY2u3Opu.png) no-repeat center;
+  background-size: cover;
+  z-index: 6;
+}
+
+.diplom-logo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group {
+  position: absolute;
+  width: 2.92%;
+  height: 27.93%;
+  top: 38.74%;
+  left: 80.26%;
+  background: url(../assets/images/remote/ZVj6YbcSek.png) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 5;
+}
+
+.theme-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  width: 6.67%;
+  height: 21.62%;
+  top: 41.44%;
+  left: 72.55%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.series {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 21.62%;
+  top: 41.44%;
+  left: 51.51%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.movies {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 21.62%;
+  top: 41.44%;
+  left: 43.7%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.rectangle-1 {
+  position: relative;
+  width: 1920px;
+  height: 619px;
+  margin: 0 0 0 0;
+  background: url("../assets/images/fallback/bg-search-section.png") no-repeat center;
+  background-size: cover;
+  z-index: 16;
+  overflow: visible auto;
+}
+
+.rectangle-2 {
+  position: relative;
+  width: 1492px;
+  height: 100px;
+  margin: 254px 0 0 214px;
+  background-color: #ffffff;
+  background-image: none;
+  border-radius: 100px;
+  z-index: 17;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  position: absolute;
+  width: 204px;
+  height: 79px;
+  top: 10px;
+  left: 1275px;
+  padding: 25px 65px 25px 65px;
+  background: #020202;
+  z-index: 20;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.search {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 74px;
+  height: 29px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 21;
+}
+
+.magnifying-glass {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 34px;
+  left: 44px;
+  background: url(../assets/icons/remote/xynZb5i8Sk.png) no-repeat center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 19;
+}
+
+.what-to-watch {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 35px;
+  left: calc(50% - 637px);
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 18;
+}
+
+.flex-row-ec {
+  position: relative;
+  width: 1425px;
+  height: 553px;
+  margin: 140px 0 0 323px;
+  z-index: 39;
+}
+
+.movie-card {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/remote/MGZnpMyuqG.png) no-repeat center top;
+  background-size: 100% auto;
+  background-color: #000000;
+  z-index: 39;
+  overflow: hidden;
+}
+
+.movie-card .rating-badge {
+  position: absolute;
+  top: 13.56px;
+  left: 13.56px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.424px;
+  padding: 3.254px 10.847px;
+  border-radius: 2.712px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.movie-card .rating-badge--high {
+  background: #3bb33b;
+}
+
+.movie-card .rating-badge--warm {
+  background: #f4a733;
+}
+
+/* Постер должен заполнять карточку полностью, без чёрной полосы */
+.movie-card.poster-fit-cover {
+  background-size: cover;
+}
+
+/*
+ * После замены части span на h1/h2/p
+ * сбрасываем стандартные margin,
+ * чтобы сохранить позиционирование по макету.
+ */
+.cursed-kingdom,
+.about-film,
+.genre,
+.fantasy-drama,
+.production-country,
+.united-kingdom,
+.actors,
+.alberto-marquez-natalia-kovalski-leonardo-rodrigues-isabella-hartman,
+.directors,
+.elias-thornbridge,
+.release-date,
+.text-11,
+.age-limit,
+.text-13 {
+  margin: 0;
+}
+
+/* Затемнение снизу постера (как на карточках в карусели на главной) */
+.movie-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 222px;
+  background: url("../assets/images/fallback/bg-card-gradient.png") no-repeat center bottom;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cursed-kingdom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 788px;
+  height: 172px;
+  top: 0;
+  left: calc(50% - 227.5px);
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 86.4px;
+  text-align: left;
+  z-index: 22;
+}
+
+.about-film {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 49px;
+  top: 241px;
+  left: calc(50% - 227.5px);
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48.6px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 23;
+}
+
+.genre {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 32px;
+  top: 355px;
+  left: calc(50% - 227.5px);
+  color: #a9a9a9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 27;
+}
+
+.fantasy-drama {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 32px;
+  top: 355px;
+  left: calc(50% - -166.5px);
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 28;
+}
+
+.production-country {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 32px;
+  top: 422px;
+  left: calc(50% - 227.5px);
+  color: #a9a9a9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 29;
+}
+
+.united-kingdom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 32px;
+  top: 422px;
+  left: calc(50% - -166.5px);
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 30;
+}
+
+.actors {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 32px;
+  top: 489px;
+  left: calc(50% - 227.5px);
+  color: #a9a9a9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 31;
+}
+
+.alberto-marquez-natalia-kovalski-leonardo-rodrigues-isabella-hartman {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 546px;
+  height: 64px;
+  top: 489px;
+  left: calc(50% - -166.5px);
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32.4px;
+  text-align: left;
+  z-index: 32;
+}
+
+.flex-row-de {
+  display: grid;
+  grid-template-columns: 300px max-content;
+  column-gap: 94px;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  min-height: 32px;
+  margin: 35px 0 0 808px;
+  z-index: 34;
+}
+
+.directors {
+  flex-shrink: 0;
+  position: relative;
+  height: 32px;
+  color: #a9a9a9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 33;
+}
+
+.elias-thornbridge {
+  flex-shrink: 0;
+  position: relative;
+  height: 32px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 34;
+}
+
+.flex-row-efc {
+  display: grid;
+  grid-template-columns: 300px max-content;
+  column-gap: 94px;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  min-height: 32px;
+  margin: 35px 0 0 808px;
+  z-index: 36;
+}
+
+.release-date {
+  flex-shrink: 0;
+  position: relative;
+  height: 32px;
+  color: #a9a9a9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 35;
+}
+
+.text-11 {
+  flex-shrink: 0;
+  position: relative;
+  height: 32px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 36;
+}
+
+.flex-row-acc {
+  display: grid;
+  grid-template-columns: 300px max-content;
+  column-gap: 94px;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  min-height: 32px;
+  margin: 35px 0 0 808px;
+  z-index: 38;
+}
+
+.movie-description {
+  position: relative;
+  width: 1280px;
+  margin: 42px 0 0 320px;
+  z-index: 39;
+}
+
+.description-title {
+  display: block;
+  height: 49px;
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48.6px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.description-text {
+  display: block;
+  margin-top: 18px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32.4px;
+  text-align: left;
+}
+
+.age-limit {
+  flex-shrink: 0;
+  position: relative;
+  height: 32px;
+  color: #a9a9a9;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 37;
+}
+
+.text-13 {
+  flex-shrink: 0;
+  position: relative;
+  height: 32px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 38;
+}
+
+.trailer {
+  display: block;
+  position: relative;
+  height: 49px;
+  margin: 83px 0 0 320px;
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48.6px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 24;
+}
+
+.rectangle-3 {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  margin: 69px 0 0 320px;
+  background: url(../assets/images/fallback/cursed-trailer-bg.png) no-repeat center;
+  background-size: cover;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.movie-trailer-video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: #000;
+  object-fit: contain;
+  display: block;
+}
+
+/*
+  Важно: hidden у статического <video> управляется из JS.
+  Базовый display:block выше может перебить UA-правило [hidden] { display:none }.
+  Явно фиксируем скрытие, чтобы до загрузки iframe не показывался нативный видеоплеер.
+*/
+.movie-trailer-video[hidden] {
+  display: none !important;
+}
+
+.vector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 115px;
+  height: 115px;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  background: url(../assets/images/fallback/cursed-trailer-play.svg) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 41;
+}
+
+.frames-from-movie {
+  display: block;
+  position: relative;
+  height: 49px;
+  margin: 98px 0 0 320px;
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48.6px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 25;
+}
+
+.flex-row-f {
+  position: relative;
+  width: 1435px;
+  height: 476px;
+  margin: 69px 0 0 323px;
+  z-index: 72;
+}
+
+.rectangle-4 {
+  position: absolute;
+  width: 627px;
+  height: 476px;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/remote/P1FN9NhfSb.png) no-repeat center;
+  background-size: cover;
+  z-index: 71;
+}
+
+.rectangle-5 {
+  position: absolute;
+  width: 627px;
+  height: 476px;
+  top: 0;
+  left: 647px;
+  background: url(../assets/images/remote/jTJjz5zPSy.png) no-repeat center;
+  background-size: cover;
+  z-index: 72;
+}
+
+.vector-6 {
+  position: absolute;
+  width: 25.303px;
+  height: 43.536px;
+  top: 216.232px;
+  left: 1413.232px;
+  background: url(../assets/icons/arrows/arrow-righ-black.svg) no-repeat center;
+  background-size: cover;
+  z-index: 70;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.gallery-arrow--prev {
+  position: absolute;
+  width: 25.303px;
+  height: 43.536px;
+  top: 216.232px;
+  left: -96px;
+  background: url(../assets/icons/arrows/arrow-righ-black.svg) no-repeat center;
+  background-size: cover;
+  transform: scaleX(-1);
+  z-index: 70;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.viewer-reviews {
+  display: block;
+  position: relative;
+  height: 49px;
+  margin: 106px 0 0 320px;
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48.6px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 26;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1277px;
+  height: 476px;
+  margin: 75px 0 0 320px;
+  z-index: 57;
+}
+
+.rectangle-7 {
+  flex-shrink: 0;
+  position: relative;
+  width: 627px;
+  height: 476px;
+  font-size: 0px;
+  background: #f2f2f2;
+  z-index: 43;
+}
+
+.irina-glebova {
+  display: block;
+  position: relative;
+  height: 32px;
+  margin: 50px 0 0 46px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 44;
+}
+
+.flex-row-dd {
+  position: relative;
+  width: 340px;
+  height: 34px;
+  margin: 13px 0 0 41px;
+  display: flex;
+  align-items: flex-start;
+  gap: 9.76px;
+  z-index: 54;
+}
+
+/*
+  Динамический рендер рецензий (script/movie.js) вставляет <span class="review-star ...">.
+  Эти стили задают тем же звёздам размеры/интервалы по макету,
+  чтобы визуально совпадало со статической Figma-разметкой.
+*/
+.flex-row-dd .review-star,
+.flex-row-11 .review-star {
+  display: inline-block;
+  width: 24.24px;
+  height: 23.17px;
+  flex: 0 0 24.24px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.flex-row-dd .review-stars-avg,
+.flex-row-11 .review-stars-avg {
+  display: none;
+}
+
+body:not(.dark-theme) .review-star--filled {
+  background-image: url(../assets/icons/blackstar.svg);
+}
+
+body:not(.dark-theme) .review-star--empty {
+  background-image: url(../assets/icons/greystar.svg);
+}
+
+body.dark-theme .review-star--filled {
+  background-image: url(../assets/icons/blackstar.svg);
+}
+
+body.dark-theme .review-star--empty {
+  background-image: url(../assets/icons/greystar.svg);
+}
+
+/* Размеры и отступы звёзд (по макету) */
+body:not(.dark-theme) .flex-row-dd>div,
+body:not(.dark-theme) .flex-row-11>div {
+  width: 24.24px;
+  height: 23.17px;
+}
+
+body:not(.dark-theme) .flex-row-dd>div:not(:first-child),
+body:not(.dark-theme) .flex-row-11>div:not(:first-child) {
+  margin-left: 9.76px;
+}
+
+.ic-round-star {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 0;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 45;
+  overflow: hidden;
+}
+
+.ic-round-star-8 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 34px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 47;
+  overflow: hidden;
+}
+
+.ic-round-star-9 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 68px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 49;
+  overflow: hidden;
+}
+
+.round-star {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 102px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 51;
+  overflow: hidden;
+}
+
+.round-star-a {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 136px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 53;
+  overflow: hidden;
+}
+
+.round-star-b {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 170px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 46;
+  overflow: hidden;
+}
+
+.round-star-c {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 204px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 48;
+  overflow: hidden;
+}
+
+.round-star-d {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 238px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.round-star-e {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 272px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 52;
+  overflow: hidden;
+}
+
+.round-star-f {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 306px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 54;
+  overflow: hidden;
+}
+
+.movie-review {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 520px;
+  height: 189px;
+  margin: 48px 0 0 46px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  z-index: 55;
+}
+
+.rectangle-10 {
+  flex-shrink: 0;
+  position: relative;
+  width: 627px;
+  height: 476px;
+  font-size: 0px;
+  background: #f2f2f2;
+  z-index: 57;
+}
+
+.author-name {
+  display: block;
+  position: relative;
+  height: 32px;
+  margin: 50px 0 0 46px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 58;
+}
+
+.flex-row-11 {
+  position: relative;
+  width: 340px;
+  height: 34px;
+  margin: 13px 0 0 41px;
+  display: flex;
+  align-items: flex-start;
+  gap: 9.76px;
+  z-index: 68;
+}
+
+.round-star-12 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 0;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 59;
+  overflow: hidden;
+}
+
+.round-star-13 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 34px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 61;
+  overflow: hidden;
+}
+
+.round-star-14 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 68px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 63;
+  overflow: hidden;
+}
+
+.round-star-15 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 102px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 65;
+  overflow: hidden;
+}
+
+.round-star-16 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 136px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 67;
+  overflow: hidden;
+}
+
+.round-star-17 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 170px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 60;
+  overflow: hidden;
+}
+
+.round-star-18 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 204px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 62;
+  overflow: hidden;
+}
+
+.round-star-19 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 238px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 64;
+  overflow: hidden;
+}
+
+.round-star-1a {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 272px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 66;
+  overflow: hidden;
+}
+
+.round-star-1b {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 306px;
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: cover;
+  z-index: 68;
+  overflow: hidden;
+}
+
+.movie-review-1c {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 520px;
+  height: 108px;
+  margin: 48px 0 0 46px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  z-index: 69;
+}
+
+/* Звёзды отзывов (светлая тема): активные — чёрные, неактивные — серые */
+body:not(.dark-theme) .flex-row-dd>div,
+body:not(.dark-theme) .flex-row-11>div {
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: contain;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 1-й отзыв: 8 активных, 2 неактивных */
+body:not(.dark-theme) .flex-row-dd>div:nth-child(n+9) {
+  background-image: url(../assets/icons/greystar.svg);
+}
+
+/* 2-й отзыв: 6 активных, 4 неактивных */
+body:not(.dark-theme) .flex-row-11>div:nth-child(n+7) {
+  background-image: url(../assets/icons/greystar.svg);
+}
+
+.rectangle-1d {
+  position: relative;
+  width: 1920px;
+  height: 212px;
+  margin: 149px 0 0 0;
+  background: #010101;
+  z-index: 8;
+}
+
+.author {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 15.57%;
+  top: 41.98%;
+  left: 16.82%;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 41.98%;
+  left: 74.53%;
+  z-index: 10;
+
+  padding: 10px 16px;
+  background: #000000;
+  border-radius: 10px;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+  color: rgba(133, 91, 252, 1);
+}
+
+.social-media a svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* Важно: SVG-иконка Дзен не должна обрезаться границами viewBox */
+.social-media a.yandex-zen svg,
+.social-media svg.yandex-zen {
+  overflow: visible;
+}
+
+.social-media a img {
+  display: block;
+}
+
+.telegram {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  /* Используем единый набор иконок из UI-kit (без фоновых "плашек") */
+  z-index: 11;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vk-fill {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 12;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zen-logo {
+  flex-shrink: 0;
+  position: relative;
+  width: 20px;
+  height: 21px;
+  z-index: 13;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-logo {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 14;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ ========== */
+
+/* Тумблер темной темы */
+.theme-toggle {
+  position: absolute;
+  width: 56px;
+  height: 31px;
+  top: 38.74%;
+  left: 80.26%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 31px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.theme-toggle input:checked+.toggle-slider {
+  background-color: #020202;
+}
+
+.theme-toggle input:checked+.toggle-slider:before {
+  transform: translateX(25px);
+}
+
+/* Социальные иконки */
+.telegram,
+.vk,
+.yandex-zen,
+.youtube {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.telegram:hover,
+.vk:hover,
+.yandex-zen:hover,
+.youtube:hover {
+  transform: scale(1.08);
+  opacity: 1;
+  /* Фиолетовый ховер по макету */
+  filter: brightness(0) saturate(100%) invert(43%) sepia(77%) saturate(3298%) hue-rotate(242deg) brightness(101%) contrast(101%);
+}
+
+/* Навигационные ссылки */
+.movies:hover,
+.series:hover {
+  opacity: 0.7;
+}
+
+/* Кадры не кликабельны: курсор по умолчанию */
+.rectangle-4,
+.rectangle-5 {
+  cursor: default;
+  transition: transform 0.3s;
+}
+
+.rectangle-4:hover,
+.rectangle-5:hover {
+  transform: scale(1.02);
+}
+
+/* Стрелка навигации */
+.vector-6 {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-arrow--prev {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.vector-6:hover {
+  transform: scale(1.1);
+}
+
+.gallery-arrow--prev:hover {
+  transform: scaleX(-1) scale(1.1);
+}
+
+/* Явный disabled-state для стрелок галереи на деталке:
+   светло-серые и некликабельные */
+.vector-6.disabled,
+.gallery-arrow--prev.disabled,
+.vector-6[aria-disabled="true"],
+.gallery-arrow--prev[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.45;
+  filter: grayscale(1) brightness(1.8);
+}
+
+.vector-6.disabled:hover,
+.gallery-arrow--prev.disabled:hover,
+.vector-6[aria-disabled="true"]:hover,
+.gallery-arrow--prev[aria-disabled="true"]:hover {
+  transform: none;
+}
+
+/* Кнопка воспроизведения трейлера */
+.vector {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.vector:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0.8;
+}
+
+/* ========== ТЁМНАЯ ТЕМА ========== */
+body.dark-theme .main-container {
+  background: #0d0d14;
+}
+
+body.dark-theme .rectangle {
+  background: rgba(0, 0, 0, 1);
+}
+
+body.dark-theme .theme-label,
+body.dark-theme .movies,
+body.dark-theme .series {
+  color: #ffffff;
+}
+
+body.dark-theme .cursed-kingdom,
+body.dark-theme .about-film,
+body.dark-theme .trailer,
+body.dark-theme .frames-from-movie,
+body.dark-theme .viewer-reviews {
+  color: #ffffff;
+}
+
+body.dark-theme .description-title,
+body.dark-theme .description-text {
+  color: #ffffff;
+}
+
+body.dark-theme .genre,
+body.dark-theme .production-country,
+body.dark-theme .actors,
+body.dark-theme .directors,
+body.dark-theme .release-date,
+body.dark-theme .age-limit {
+  color: #a0a0b0;
+}
+
+body.dark-theme .fantasy-drama,
+body.dark-theme .united-kingdom,
+body.dark-theme .alberto-marquez-natalia-kovalski-leonardo-rodrigues-isabella-hartman,
+body.dark-theme .elias-thornbridge,
+body.dark-theme .text-11,
+body.dark-theme .text-13 {
+  color: #ffffff;
+}
+
+body.dark-theme .rectangle-7,
+body.dark-theme .rectangle-10 {
+  background: rgba(0, 0, 0, 1);
+}
+
+body.dark-theme .irina-glebova,
+body.dark-theme .author-name,
+body.dark-theme .movie-review,
+body.dark-theme .movie-review-1c {
+  color: #ffffff;
+}
+
+
+/* Звёзды отзывов (по макету): активные — белые, неактивные — серые */
+body.dark-theme .flex-row-dd>div,
+body.dark-theme .flex-row-11>div {
+  /*
+    ПРИЧИНА (две звезды с другим фоном / не белые):
+    изначально звезды — PNG как background (часть PNG имеет светлую подложку),
+    поэтому в тёмной теме появляются "квадраты" и неверные цвета.
+    Решение по макету: в тёмной теме активные — белые, неактивные — серые.
+    Полностью убираем background-иконки и рисуем звезду текстом.
+  */
+  background: url(../assets/icons/blackstar.svg) no-repeat center;
+  background-size: contain;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  width: 24.24px;
+  height: 23.17px;
+  margin-left: 9.76px;
+}
+
+body.dark-theme .flex-row-dd>div:first-child,
+body.dark-theme .flex-row-11>div:first-child {
+  margin-left: 0;
+}
+
+/* 1-й отзыв: 8 активных, 2 неактивных */
+body.dark-theme .flex-row-dd>div:nth-child(n+9) {
+  background-image: url(../assets/icons/greystar.svg);
+}
+
+/* 2-й отзыв: 6 активных, 4 неактивных */
+body.dark-theme .flex-row-11>div:nth-child(n+7) {
+  background-image: url(../assets/icons/greystar.svg);
+}
+
+body.dark-theme .toggle-slider {
+  background-color: #ffffff;
+}
+
+body.dark-theme .theme-toggle input:checked+.toggle-slider {
+  background-color: #ffffff;
+}
+
+body.dark-theme .toggle-slider:before {
+  background-color: #020202;
+}
+
+body.dark-theme .vector,
+body.dark-theme .vector-6,
+body.dark-theme .gallery-arrow--prev {
+  filter: invert(1);
+}
+
+
+/* SVG-иконки соцсетей */
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  background: none !important;
+  transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+  color: rgba(133, 91, 252, 1);
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.social-media a svg {
+  display: block;
+}
+
+.social-media a:hover svg {
+  filter: none !important;
+}

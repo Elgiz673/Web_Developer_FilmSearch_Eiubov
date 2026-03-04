@@ -1,0 +1,76 @@
+/* ====== Палитра проекта ====== */
+
+/* Светлая тема (по умолчанию) */
+:root {
+  /* Фоны */
+  --bg-color: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --footer-bg: #eef0f2;
+
+  /* Акцентный градиент */
+  --primary-color-start: #e8104a;
+  --primary-color-end: #f45c2d;
+
+  /* Текст */
+  --text-color: #1a1a2e;
+  --text-muted: #6b7280;
+
+  /* Карточки и элементы интерфейса */
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --button-bg: #e8104a;
+  --button-bg-hover: #f45c2d;
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+
+  /* Служебные цвета */
+  --success-color: #22c55e;
+  --warning-color: #eab308;
+  --error-color: #ef4444;
+  --star-color: #f5c518;
+}
+
+/* Тёмная тема: значения переменных переключаются через класс .dark-theme */
+.dark-theme {
+  --bg-color: #0d0d14;
+  --bg-secondary: #16162a;
+  --footer-bg: #0a0a10;
+
+  --primary-color-start: #c7144d;
+  --primary-color-end: #f45c2d;
+
+  --text-color: #ffffff;
+  --text-muted: #a0a0b0;
+
+  --card-bg: #1a1a30;
+  --card-border: #2a2a45;
+  --button-bg: #c7144d;
+  --button-bg-hover: #f45c2d;
+  --input-bg: #12121f;
+  --input-border: #2a2a45;
+}
+
+/* ====== Служебные классы цветов ====== */
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--bg-color), var(--bg-color)),
+    linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Цвет hover для иконок соцсетей по макету */
+.social-media a:hover {
+  background: rgba(133, 91, 252, 1);
+}

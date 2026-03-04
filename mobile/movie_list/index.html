@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фильмы (моб) - Что сегодня посмотреть?</title>
+  <link rel="stylesheet" href="../../style/fonts.css" />
+  <link rel="stylesheet" href="../../style/colors.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="../../script/mobile-redirect.js"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- ====== Поисковый блок ====== -->
+    <div class="rectangle">
+      <div class="rectangle-1">
+        <!-- Нативная форма нужна для корректной отправки по клавише ввода и текущих обработчиков. -->
+        <form id="search-form" class="search-form" aria-label="Поиск">
+          <input type="text" id="search-query" class="search-input" placeholder="Какой фильм посмотреть?"
+            aria-label="Поисковый запрос" />
+          <button type="submit" class="frame"><span class="find">Найти</span></button>
+          <div class="magnifying-glass" aria-hidden="true"></div>
+        </form>
+      </div>
+    </div>
+
+    <span class="films">Фильмы</span>
+
+    <!-- ====== Фильтры и карточка ====== -->
+    <div class="flex-row-b">
+      <span class="span-genre">Жанр</span>
+      <div class="card-film"></div>
+      <!-- Поле выбора расположено поверх декоративного блока, чтобы сохранить и внешний вид, и доступность. -->
+      <div class="rectangle-2" aria-label="Выбрать жанр">
+        <span class="span-all-genres" data-filter-label>Все жанры</span>
+        <div class="vector" aria-hidden="true"></div>
+        <select id="genre-filter" class="filter-select filter-select-overlay" aria-label="Жанр">
+          <option value="">Все жанры</option>
+          <option value="fantasy">Фэнтези</option>
+          <option value="drama">Драма</option>
+          <option value="action">Боевик</option>
+          <option value="thriller">Триллер</option>
+          <option value="scifi">Фантастика</option>
+          <option value="horror">Ужасы</option>
+          <option value="comedy">Комедия</option>
+        </select>
+      </div>
+      <span class="span-rating">Рейтинг</span>
+      <div class="rectangle-3" aria-label="Выбрать рейтинг">
+        <span class="all-genres" data-filter-label>Выбрать рейтинг</span>
+        <div class="vector-4" aria-hidden="true"></div>
+        <select id="rating-filter" class="filter-select filter-select-overlay" aria-label="Рейтинг">
+          <option value="">Выбрать рейтинг</option>
+          <option value="9">от 9</option>
+          <option value="8">от 8</option>
+          <option value="7">от 7</option>
+          <option value="6">от 6</option>
+        </select>
+      </div>
+    </div>
+    <span class="genre">Страна</span>
+    <div class="rectangle-5" aria-label="Выбрать страну">
+      <span class="all-countries" data-filter-label>Все страны</span>
+      <div class="vector-6" aria-hidden="true"></div>
+      <select id="country-filter" class="filter-select filter-select-overlay" aria-label="Страна">
+        <option value="">Все страны</option>
+        <option value="usa">США</option>
+        <option value="uk">Великобритания</option>
+        <option value="russia">Россия</option>
+        <option value="france">Франция</option>
+      </select>
+    </div>
+    <span class="release-year">Год выпуска</span>
+    <div class="rectangle-7" aria-label="Выбрать год">
+      <span class="all-genres-8" data-filter-label>Все годы</span>
+      <div class="vector-9" aria-hidden="true"></div>
+      <select id="year-filter" class="filter-select filter-select-overlay" aria-label="Год выпуска">
+        <option value="">Все годы</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+      </select>
+    </div>
+
+    <div class="flex-row-b-a">
+      <div class="movie-card"></div>
+      <button type="button" class="vector-b" aria-label="Предыдущий"></button>
+      <button type="button" class="vector-c" aria-label="Следующий"></button>
+    </div>
+
+    <div class="footer-mob">
+      <span class="copyright-ivan-ivanov">&#169;&#65038; 2026 Элгиз Эюбов</span>
+      <div class="group">
+        <div class="social-media">
+          <a class="telegram" href="#" aria-label="Telegram"></a>
+          <a class="vk-fill" href="#" aria-label="ВКонтакте"></a>
+          <a class="zen-logo" href="#" aria-label="Дзен"></a>
+          <a class="youtube-logo" href="#" aria-label="YouTube"></a>
+        </div>
+        <div class="rectangle-d"></div>
+      </div>
+    </div>
+
+    <div class="mobile-menu"></div>
+
+    <!-- ====== Мобильное меню ====== -->
+    <!-- Важно: эти идентификаторы и классы используются скриптами для открытия/закрытия панели и затемнения. -->
+    <button id="burger-menu" class="burger-hit" type="button" aria-label="Открыть меню"></button>
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+    <div class="menu-caption" aria-hidden="true">
+      <span class="menu-caption__text">Меню</span>
+    </div>
+    <nav id="main-nav" class="mobile-nav" aria-label="Меню">
+      <button type="button" class="mobile-nav__close" aria-label="Закрыть меню"
+        onclick="document.getElementById('burger-menu').click()"></button>
+
+      <a href="../index.html" class="mobile-nav__link">Главная</a>
+      <a href="index.html" class="mobile-nav__link is-active">Фильмы</a>
+      <a href="../series_list/index.html" class="mobile-nav__link">Сериалы</a>
+
+      <div class="mobile-nav__spacer" aria-hidden="true"></div>
+
+      <div class="mobile-nav__theme" aria-label="Переключатель темы">
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-checkbox" aria-label="Тёмная тема" />
+          <span class="theme-slider" aria-hidden="true"></span>
+        </label>
+        <span class="theme-label">Тёмная тема</span>
+      </div>
+    </nav>
+  </div>
+
+  <script src="../../script/api.js"></script>
+  <script src="../../script/main.js"></script>
+  <script src="../../script/lists.js"></script>
+  <script src="../../script/mobile-filters.js"></script>
+  <script src="../../script/mobile-carousel.js"></script>
+</body>
+
+</html>

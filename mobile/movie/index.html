@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фильм (моб) - Что сегодня посмотреть?</title>
+  <link rel="stylesheet" href="../../style/fonts.css" />
+  <link rel="stylesheet" href="../../style/colors.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="../../script/mobile-redirect.js"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- ====== Верхняя зона и поиск ====== -->
+    <div class="mobile-menu"></div>
+
+    <div class="movie-hero">
+      <div class="movie-hero__search">
+        <form id="search-form" class="search-form" aria-label="Поиск">
+          <input type="text" id="search-query" class="search-input" placeholder="Какой фильм посмотреть?"
+            aria-label="Поисковый запрос" />
+          <button type="submit" class="frame"><span class="find">Найти</span></button>
+          <div class="magnifying-glass" aria-hidden="true"></div>
+        </form>
+      </div>
+    </div>
+
+    <h1 class="movie-title movie-title--top" id="movie-title">Проклятое королевство</h1>
+
+    <!-- ====== Карточка фильма ====== -->
+    <div class="movie-poster-container">
+      <div class="movie-poster" id="movie-poster-container">
+        <span class="rating-badge" id="movie-rating" hidden aria-label="Рейтинг"></span>
+      </div>
+      <div class="poster-gradient"></div>
+    </div>
+
+    <!-- ====== Основная информация ====== -->
+    <div class="movie-info">
+      <h2 class="section-title" id="about-section-title">О фильме</h2>
+
+      <div class="info-section">
+        <span class="info-label">Жанр</span>
+        <span class="info-value" id="movie-genre">Фэнтези, драма</span>
+      </div>
+
+      <div class="info-section">
+        <span class="info-label">Страна производства</span>
+        <span class="info-value" id="movie-country">Великобритания</span>
+      </div>
+
+      <div class="info-section">
+        <span class="info-label">Актёры</span>
+        <span class="info-value" id="movie-actors">Альберто Маркез, Наталия Ковальски, Леонардо Родригес</span>
+      </div>
+
+      <div class="info-section">
+        <span class="info-label">Режиссёр</span>
+        <span class="info-value" id="movie-director">Элиас Торнбридж</span>
+      </div>
+
+      <div class="info-section">
+        <span class="info-label">Дата релиза</span>
+        <span class="info-value" id="movie-year">2023</span>
+      </div>
+
+      <div class="info-section">
+        <span class="info-label">Возрастное ограничение</span>
+        <span class="info-value" id="movie-age">16+</span>
+      </div>
+    </div>
+
+    <!-- ====== Медиа-блок ====== -->
+    <div class="trailer-section">
+      <h2 class="section-title">Трейлер</h2>
+      <div class="trailer-placeholder">
+        <div class="play-button"></div>
+      </div>
+    </div>
+
+    <!-- Стрелки оставлены как элементы без замены, так как их состояние и обработчики завязаны на текущие классы. -->
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <h2 class="section-title">Галерея</h2>
+        <div class="gallery-controls" aria-hidden="true">
+          <span class="gallery-arrow gallery-arrow--prev"></span>
+          <span class="gallery-arrow gallery-arrow--next"></span>
+        </div>
+      </div>
+      <div class="frames-container">
+        <div class="rectangle-4" aria-label="Кадр 1"></div>
+        <div class="rectangle-5" aria-label="Кадр 2"></div>
+      </div>
+    </section>
+
+    <!-- ====== Блок отзывов ====== -->
+    <section class="reviews-section">
+      <h2 class="reviews-title">Рецензии зрителей</h2>
+      <div class="reviews-container">
+        <div class="review-card review-card--tall rectangle-7">
+          <span class="review-author irina-glebova">Ирина Глебова</span>
+          <div class="review-stars flex-row-dd" aria-label="Рейтинг 8 из 10">
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--empty">★</span>
+            <span class="review-star review-star--empty">★</span>
+          </div>
+          <span class="review-text movie-review">
+            Проклятое королевство — это фильм, который захватил мое сердце и не отпустит. Этот фильм, с его
+            захватывающим сюжетом и отличными актерами, оставил у меня невероятное впечатление. Каждый кадр этого фильма
+            наполнен эмоциями и драматизмом, что делает его идеальным для тех, кто любит киноискусство...
+          </span>
+        </div>
+        <div class="review-card rectangle-10">
+          <span class="review-author author-name">Мария Семёнова</span>
+          <div class="review-stars flex-row-11" aria-label="Рейтинг 7 из 10">
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--filled">★</span>
+            <span class="review-star review-star--empty">★</span>
+            <span class="review-star review-star--empty">★</span>
+            <span class="review-star review-star--empty">★</span>
+          </div>
+          <span class="review-text movie-review-1c">
+            Честно говоря, фильм оставил смешанные впечатления. Нудное начало. Актёры, правда, играют великолепно, но
+            даже они не спасли ситуацию.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Футер ====== -->
+    <div class="footer-mob">
+      <span class="copyright-ivan-ivanov">&#169;&#65038; 2026 Элгиз Эюбов</span>
+      <div class="group">
+        <div class="social-media">
+          <a class="telegram" href="#" aria-label="Telegram"></a>
+          <a class="vk-fill" href="#" aria-label="ВКонтакте"></a>
+          <a class="zen-logo" href="#" aria-label="Дзен"></a>
+          <a class="youtube-logo" href="#" aria-label="YouTube"></a>
+        </div>
+        <div class="rectangle-footer"></div>
+      </div>
+    </div>
+
+    <!-- ====== Мобильное меню ====== -->
+    <!-- Важно: эти идентификаторы и классы используются скриптами для управления состоянием меню и затемнения. -->
+    <button id="burger-menu" class="burger-hit" type="button" aria-label="Открыть меню"></button>
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+    <div class="menu-caption" aria-hidden="true">
+      <span class="menu-caption__text">Меню</span>
+    </div>
+    <nav id="main-nav" class="mobile-nav" aria-label="Меню">
+      <button type="button" class="mobile-nav__close" aria-label="Закрыть меню"
+        onclick="document.getElementById('burger-menu').click()"></button>
+
+      <a href="../index.html" class="mobile-nav__link">Главная</a>
+      <a href="../movie_list/index.html" class="mobile-nav__link">Фильмы</a>
+      <a href="../series_list/index.html" class="mobile-nav__link">Сериалы</a>
+
+      <div class="mobile-nav__spacer" aria-hidden="true"></div>
+
+      <div class="mobile-nav__theme" aria-label="Переключатель темы">
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-checkbox" aria-label="Тёмная тема" />
+          <span class="theme-slider" aria-hidden="true"></span>
+        </label>
+        <span class="theme-label">Тёмная тема</span>
+      </div>
+    </nav>
+  </div>
+
+  <script src="../../script/api.js"></script>
+  <script src="../../script/main.js"></script>
+  <script src="../../script/gallery.js"></script>
+  <script src="../../script/movie.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,642 @@
+/*
+  Общие стили для всех страниц проекта.
+  Содержит базовый сброс, шапку/футер, навигацию,
+  переключатель темы, форму поиска и адаптивные правила.
+*/
+
+/* Сброс базовых браузерных стилей */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color-start);
+}
+
+/*
+ * Для ссылок "Фильмы/Сериалы" в шапке отключаем
+ * общий hover-эффект (цвет и прозрачность).
+ */
+.top-nav a:hover {
+  color: inherit;
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input,
+select {
+  font-family: inherit;
+  outline: none;
+}
+
+/* ===== ШАПКА ===== */
+header {
+  background-color: var(--bg-secondary);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+}
+
+/* Логотип */
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+header .logo img {
+  height: 36px;
+  width: auto;
+}
+
+header .logo span {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+/* Навигация */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+nav a {
+  position: relative;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 0;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: var(--primary-color-start);
+}
+
+/*
+ * Для .top-nav отключаем декоративную линию из общих nav-стилей,
+ * чтобы не пересекать текст ссылок при hover.
+ */
+.top-nav a::after {
+  content: none;
+}
+
+/* Переключатель темы */
+header .theme-toggle {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.theme-toggle input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.theme-toggle label {
+  width: 56px;
+  height: 28px;
+  background-color: var(--card-border);
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+/* Иконки солнца и луны в переключателе */
+.theme-toggle label::before {
+  content: '☀️';
+  font-size: 14px;
+}
+
+.theme-toggle label::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.theme-toggle span.moon {
+  font-size: 14px;
+}
+
+.theme-toggle input[type=checkbox]:checked+label::after {
+  transform: translateX(28px);
+}
+
+.theme-toggle input[type=checkbox]:checked+label {
+  background-color: var(--input-border);
+}
+
+/* Кнопка мобильного меню */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 101;
+}
+
+.burger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== ПОИСКОВЫЙ БЛОК ===== */
+.search-section {
+  position: relative;
+  padding: 48px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.search-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(8, 8, 16, 0.88), rgba(8, 8, 16, 0.35)),
+    url('../assets/images/0dc1e77b0fd0f0457c33f66baa816ed6f2494759');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.light-theme .search-section::before {
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.65)),
+    url('../assets/images/0dc1e77b0fd0f0457c33f66baa816ed6f2494759');
+}
+
+body.light-theme .search-section h2 {
+  color: var(--text-color);
+}
+
+.search-section h2 {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.search-section form {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: var(--input-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Иконка лупы внутри поля поиска */
+.search-section .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.search-section input[type=text] {
+  flex: 1;
+  padding: 16px 20px 16px 48px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.search-section input[type=text]::placeholder {
+  color: var(--text-muted);
+}
+
+.search-section input[type=text]:focus {
+  border-color: var(--primary-color-start);
+}
+
+.search-section button {
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.search-section button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* ===== ЕДИНАЯ ФОРМА ПОИСКА (для всех десктопных страниц) ===== */
+.search-form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.search-input {
+  position: absolute;
+  width: calc(100% - 230px);
+  height: 79px;
+  top: 10px;
+  left: 20px;
+  padding: 0 20px 0 89px;
+  border: none;
+  background: transparent;
+  color: rgba(1, 1, 1, 1);
+  font-family: Inter, var(--default-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+  border-radius: 100px;
+  /* Иконка лупы внутри инпута (как в макете) */
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2732%27%20height%3D%2732%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23010101%27%20stroke-opacity%3D%270.3%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Ccircle%20cx%3D%2711%27%20cy%3D%2711%27%20r%3D%277%27/%3E%3Cline%20x1%3D%2721%27%20y1%3D%2721%27%20x2%3D%2716.65%27%20y2%3D%2716.65%27/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 24px center;
+  background-size: 32px 32px;
+}
+
+.search-input::placeholder {
+  color: rgba(1, 1, 1, 1);
+  font-family: Inter, var(--default-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+  opacity: 1;
+}
+
+.search-btn {
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #333;
+  transform: scale(1.02);
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+  background-color: var(--footer-bg);
+  padding: 32px 40px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0 0 16px;
+  font-size: 0.875rem;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--card-border);
+  border-radius: 50%;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(199, 20, 77, 0.4);
+}
+
+footer .social-icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Поддержка hover-состояния через класс из JS */
+.search-section button.hovered {
+  opacity: 0.9;
+}
+
+footer .social-icons a.hovered {
+  background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ===== ЗАГОЛОВОК СТРАНИЦЫ ===== */
+.page-title {
+  padding: 32px 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 1024px) {
+  header {
+    padding: 16px 24px;
+  }
+
+  .search-section {
+    padding: 40px 24px;
+  }
+
+  footer {
+    padding: 24px;
+  }
+
+  .page-title {
+    padding: 24px 24px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+
+  header .logo span {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    order: 3;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--bg-secondary);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 24px 24px;
+    gap: 24px;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+  }
+
+  header nav.active {
+    left: 0;
+  }
+
+  nav a {
+    font-size: 1.125rem;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  header .theme-toggle {
+    order: 2;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+
+  .search-section {
+    padding: 32px 16px;
+  }
+
+  .search-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  }
+
+  .search-section form {
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: visible;
+  }
+
+  .search-section input[type=text] {
+    border-radius: 8px;
+    border-right: 1px solid var(--input-border);
+    margin-bottom: 12px;
+  }
+
+  .search-section button {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px 16px;
+  }
+
+  .page-title {
+    padding: 20px 16px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .page-title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo img {
+    height: 32px;
+  }
+
+  .theme-toggle label {
+    width: 48px;
+    height: 24px;
+  }
+
+  .theme-toggle label::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .theme-toggle input[type=checkbox]:checked+label::after {
+    transform: translateX(24px);
+  }
+}
+
+/* Затемнение фона при открытом мобильном меню */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+
+/* Hover для иконок соцсетей по макету (только десктоп) */
+@media (hover: hover) and (pointer: fine) {
+  .social-media a:hover {
+    background: rgba(133, 91, 252, 1);
+  }
+}
+
+/* Убираем hover на мобильных устройствах */
+@media (hover: none),
+(pointer: coarse) {
+
+  .social-media a:hover,
+  .social-media a:active,
+  .social-media a:focus,
+  footer .social-icons a:hover,
+  footer .social-icons a:active,
+  footer .social-icons a:focus {
+    background: transparent !important;
+    background-color: transparent !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+  }
+}

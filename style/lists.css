@@ -1,0 +1,1446 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.diplom-logo,
+.telegram,
+.vk,
+.yandex-zen,
+.youtube {
+  display: block;
+}
+
+.movies,
+.series {
+  cursor: pointer;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1920px;
+  height: 2980px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+.rectangle {
+  position: relative;
+  width: 1920px;
+  height: 111px;
+  margin: 0 0 0 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.diplom-logo {
+  position: absolute;
+  width: 342px;
+  height: 70px;
+  top: 14px;
+  left: 310px;
+  background: url(../assets/icons/remote/bwoRxEsezm.png) no-repeat center;
+  background-size: cover;
+  z-index: 6;
+}
+
+.diplom-logo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group {
+  position: absolute;
+  width: 2.92%;
+  height: 27.93%;
+  top: 38.74%;
+  left: 80.26%;
+  background: url(../assets/images/remote/ZVj6YbcSek.png) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 5;
+}
+
+.theme-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  width: 6.67%;
+  height: 21.62%;
+  top: 41.44%;
+  left: 72.55%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.series {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 21.62%;
+  top: 41.44%;
+  left: 51.51%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.movies {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 21.62%;
+  top: 41.44%;
+  left: 43.7%;
+  color: #9e9e9e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Навигация (по макету):
+   - текущая страница: серый, некликабельный
+   - ссылка на другой раздел: контрастный (светлая тема — чёрный, тёмная — белый)
+   Важно: НЕ меняем позиционирование (absolute) у .movies/.series, чтобы не было регрессии. */
+.rectangle a.movies,
+.rectangle a.series {
+  color: #000000;
+}
+
+.rectangle a[aria-current="page"] {
+  color: #9e9e9e;
+  pointer-events: none;
+  cursor: default;
+}
+
+body.dark-theme .rectangle a.movies,
+body.dark-theme .rectangle a.series {
+  color: #ffffff;
+}
+
+body.dark-theme .rectangle a[aria-current="page"] {
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  cursor: default;
+}
+
+.flex-row-c {
+  position: relative;
+  width: 1940px;
+  height: 2657px;
+  margin: 0 0 0 -20px;
+  z-index: 38;
+}
+
+.rectangle-1 {
+  position: absolute;
+  width: 1920px;
+  height: 619px;
+  top: 0;
+  left: 20px;
+  background: url("../assets/images/fallback/bg-search-section.png") no-repeat center;
+  background-size: cover;
+  z-index: 16;
+}
+
+.rectangle-2 {
+  position: relative;
+  width: 1492px;
+  height: 100px;
+  margin: 254px 0 0 214px;
+  background-color: #ffffff;
+  background-image: none;
+  border-radius: 100px;
+  z-index: 17;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  position: absolute;
+  width: 204px;
+  height: 79px;
+  top: 10px;
+  left: 1275px;
+  padding: 25px 65px 25px 65px;
+  background: #020202;
+  z-index: 20;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.search {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 74px;
+  height: 29px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 21;
+}
+
+.magnifying-glass {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 34px;
+  left: 44px;
+  background: url(../assets/icons/remote/cHH4V9DXEa.png) no-repeat center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 19;
+}
+
+.watch-today {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 35px;
+  left: calc(50% - 637px);
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 18;
+}
+
+.filter {
+  position: absolute;
+  width: 478px;
+  height: auto;
+  min-height: 600px;
+  /* По макету фильтры начинаются сразу под блоком hero (619px),
+     а не наезжают на него. */
+  top: 619px;
+  left: 0;
+  /* Фон фильтра заполняет колонку до низа блока (.flex-row-c) */
+  bottom: 0;
+  border: none;
+  z-index: 50;
+  overflow: visible;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 9px 4px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.default-property {
+  position: relative;
+  width: 438px;
+  height: auto;
+  margin: 20px 0 0 20px;
+  padding-left: 90px;
+  box-sizing: border-box;
+  z-index: 39;
+  overflow: visible;
+}
+
+.filter-3 {
+  position: relative;
+  width: 300px;
+  height: 132px;
+  margin: 112px 0 0 0;
+  font-size: 0px;
+  z-index: 41;
+  overflow: visible auto;
+}
+
+.genre {
+  display: block;
+  position: relative;
+  height: 39px;
+  margin: 0 0 0 0;
+  padding-left: 23px;
+  padding-right: 77px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 42;
+}
+
+.frame-4 {
+  position: relative;
+  width: 300px;
+  height: 68px;
+  margin: 25px 0 0 0;
+  z-index: 43;
+}
+
+.rectangle-5 {
+  position: absolute;
+  width: 300px;
+  height: 68px;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  z-index: 44;
+  border-radius: 10px;
+}
+
+.all-genres {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 24px;
+  top: 22px;
+  left: 23px;
+  color: #686868;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 46;
+}
+
+.vector {
+  position: absolute;
+  width: 18px;
+  height: 9px;
+  top: 29px;
+  left: 260px;
+  background: url(../assets/icons/remote/zhVVgXzEWZ.png) no-repeat center;
+  background-size: cover;
+  z-index: 45;
+}
+
+.frame-6 {
+  position: relative;
+  width: 300px;
+  height: 132px;
+  margin: 50px 0 0 0;
+  font-size: 0px;
+  z-index: 47;
+  overflow: visible auto;
+}
+
+.rating {
+  display: block;
+  position: relative;
+  height: 39px;
+  margin: 0 0 0 0;
+  padding-left: 23px;
+  padding-right: 77px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 48;
+}
+
+.frame-7 {
+  position: relative;
+  width: 300px;
+  height: 68px;
+  margin: 25px 0 0 0;
+  z-index: 49;
+}
+
+.rectangle-8 {
+  position: absolute;
+  width: 300px;
+  height: 68px;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  z-index: 50;
+  border-radius: 10px;
+}
+
+.all-genres-9 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 24px;
+  top: 22px;
+  left: 23px;
+  color: #686868;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 52;
+}
+
+.vector-a {
+  position: absolute;
+  width: 18px;
+  height: 9px;
+  top: 29px;
+  left: 260px;
+  background: url(../assets/icons/remote/ScEPtw7utz.png) no-repeat center;
+  background-size: cover;
+  z-index: 51;
+}
+
+.frame-b {
+  position: relative;
+  width: 300px;
+  height: 132px;
+  margin: 50px 0 0 0;
+  font-size: 0px;
+  z-index: 53;
+  overflow: visible auto;
+}
+
+.genre-c {
+  display: block;
+  position: relative;
+  height: 39px;
+  margin: 0 0 0 0;
+  padding-left: 23px;
+  padding-right: 77px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 54;
+}
+
+.frame-d {
+  position: relative;
+  width: 300px;
+  height: 68px;
+  margin: 25px 0 0 0;
+  z-index: 55;
+}
+
+.rectangle-e {
+  position: absolute;
+  width: 300px;
+  height: 68px;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  z-index: 56;
+  border-radius: 10px;
+}
+
+.all-countries {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 24px;
+  top: 22px;
+  left: 23px;
+  color: #686868;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 58;
+}
+
+.vector-f {
+  position: absolute;
+  width: 18px;
+  height: 9px;
+  top: 29px;
+  left: 260px;
+  background: url(../assets/icons/remote/wHPXhnRKGt.png) no-repeat center;
+  background-size: cover;
+  z-index: 57;
+}
+
+.frame-10 {
+  position: relative;
+  width: 300px;
+  height: 132px;
+  margin: 50px 0 0 0;
+  font-size: 0px;
+  z-index: 59;
+  overflow: visible auto;
+}
+
+.genre-11 {
+  display: block;
+  position: relative;
+  height: 39px;
+  margin: 0 0 0 0;
+  padding-left: 23px;
+  padding-right: 77px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 60;
+}
+
+.frame-12 {
+  position: relative;
+  width: 300px;
+  height: 68px;
+  margin: 25px 0 0 0;
+  z-index: 61;
+}
+
+.rectangle-13 {
+  position: absolute;
+  width: 300px;
+  height: 68px;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  z-index: 62;
+  border-radius: 10px;
+}
+
+.all-years {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 24px;
+  top: 22px;
+  left: 23px;
+  color: #686868;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 64;
+}
+
+.vector-14 {
+  position: absolute;
+  width: 18px;
+  height: 9px;
+  top: 29px;
+  left: 260px;
+  background: url(../assets/icons/remote/euHduZuHSL.png) no-repeat center;
+  background-size: cover;
+  z-index: 63;
+}
+
+/* Скрываем .rectangle-15, чтобы этот слой не перекрывал фильтры */
+.films-16 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 86px;
+  top: 731px;
+  /* Сдвигаем контент вправо, чтобы не наезжал на блок фильтров (478px) + gap 48px */
+  left: 526px;
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 86px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 37;
+}
+
+.num-1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 759px;
+  left: 1442px;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 32;
+}
+
+.num-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 759px;
+  left: 1479px;
+  color: #bfbfbf;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 33;
+}
+
+.num-3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 759px;
+  left: 1519px;
+  color: #bfbfbf;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 34;
+}
+
+.num-4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 759px;
+  left: 1560px;
+  color: #bfbfbf;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 35;
+}
+
+.num-5 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 759px;
+  left: 1601px;
+  color: #bfbfbf;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 36;
+}
+
+.film-card {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 910px;
+  left: 503px;
+  background: url(../assets/images/remote/mmq1evFfoA.png) no-repeat center;
+  background-size: cover;
+  z-index: 22;
+  overflow: hidden;
+}
+
+.film-card-17 {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 910px;
+  left: 881px;
+  background: url(../assets/images/remote/O5JQimADVT.png) no-repeat center;
+  background-size: cover;
+  z-index: 23;
+  overflow: hidden;
+}
+
+.film-card-18 {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 910px;
+  left: 1259px;
+  background: url(../assets/images/remote/F0EzijP0CS.png) no-repeat center;
+  background-size: cover;
+  z-index: 24;
+  overflow: hidden;
+}
+
+.film-card-19 {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 1460px;
+  left: 503px;
+  background: url(../assets/images/remote/Fvzsv6CrbS.png) no-repeat center;
+  background-size: cover;
+  z-index: 25;
+  overflow: hidden;
+}
+
+.film-card-1a {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 1460px;
+  left: 881px;
+  background: url(../assets/images/remote/6VVRRhKVVC.png) no-repeat center;
+  background-size: cover;
+  z-index: 27;
+  overflow: hidden;
+}
+
+.movie-card {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 1460px;
+  left: 1259px;
+  background: url(../assets/images/remote/86ur4ZHmTv.png) no-repeat center;
+  background-size: cover;
+  z-index: 29;
+  overflow: hidden;
+}
+
+.movie-card-1b {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 2010px;
+  left: 503px;
+  background: url(../assets/images/remote/M5GdESwto0.png) no-repeat center;
+  background-size: cover;
+  z-index: 26;
+  overflow: hidden;
+}
+
+.movie-card-1c {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 2010px;
+  left: 881px;
+  background: url(../assets/images/remote/wScN03YMD1.png) no-repeat center;
+  background-size: cover;
+  z-index: 28;
+  overflow: hidden;
+}
+
+.movie-card-1d {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 2010px;
+  left: 1259px;
+  background: url(../assets/images/remote/RXLhr1O9QQ.png) no-repeat center;
+  background-size: cover;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.rectangle-1e {
+  position: relative;
+  width: 1920px;
+  height: 212px;
+  margin: 0 0 0 0;
+  background: #010101;
+  z-index: 8;
+}
+
+.author-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 15.57%;
+  top: 41.98%;
+  left: 16.82%;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 41.98%;
+  left: 74.53%;
+  z-index: 10;
+
+  padding: 10px 16px;
+  background: #000000;
+  border-radius: 10px;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+  color: rgba(133, 91, 252, 1);
+}
+
+.social-media a svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* Важно: SVG-иконка Дзен не должна обрезаться границами viewBox */
+.social-media a.yandex-zen svg,
+.social-media svg.yandex-zen {
+  overflow: visible;
+}
+
+.social-media a img {
+  display: block;
+}
+
+.telegram {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  /* Используем иконку без фоновой плашки, чтобы на hover не появлялся квадрат */
+  z-index: 11;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vk {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  /* Используется вариант иконки без фонового квадрата при наведении */
+  z-index: 12;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yandex-zen {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 13;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 14;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ ========== */
+
+/* Тумблер темной темы */
+.theme-toggle {
+  position: absolute;
+  width: 56px;
+  height: 31px;
+  top: 38.74%;
+  left: 80.26%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 31px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.theme-toggle input:checked+.toggle-slider {
+  background-color: #020202;
+}
+
+.theme-toggle input:checked+.toggle-slider:before {
+  transform: translateX(25px);
+}
+
+/* Фильтры - селекты */
+.filter-select.is-open {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2732%27%20height%3D%2732%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23010101%27%20fill-opacity%3D%270.3%27%20d%3D%27M7%2014l5-5%205%205z%27/%3E%3C/svg%3E");
+}
+
+.filter-select {
+  width: 300px;
+  height: 68px;
+  padding: 0 40px 0 23px;
+  border: none;
+  background: #f2f2f2;
+  /* По макету у селектов радиус 10px */
+  border-radius: 10px;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  color: #686868;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2732%27%20height%3D%2732%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23010101%27%20fill-opacity%3D%270.3%27%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.filter-input {
+  background-image: none;
+}
+
+.filter-input::placeholder {
+  color: #686868;
+}
+
+.filter-select:hover {
+  background-color: #e8e8e8;
+}
+
+.filter-select:focus {
+  outline: 2px solid #020202;
+}
+
+/* Кнопка сброса фильтров */
+.reset-btn {
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin: 30px auto 20px 90px;
+  background: #020202;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: Inter, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #333;
+}
+
+/* Сетка карточек */
+.cards-grid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 358px);
+  gap: 50px 20px;
+  top: 910px;
+  /* 478 (ширина фильтра) + 48 (gap по макету) */
+  left: 526px;
+  z-index: 30;
+}
+
+.cards-grid .movie-card {
+  position: relative;
+  width: 358px;
+  height: 500px;
+  top: auto;
+  left: auto;
+  border-radius: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: none;
+  background: #1a1a1a;
+  /* Без drop-shadow: как в макете */
+}
+
+
+.cards-grid .movie-card .poster-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-grid .movie-card .rating-badge {
+  position: absolute;
+  top: 13.56px;
+  left: 13.56px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5.424px;
+  padding: 3.254px 10.847px;
+  border-radius: 2.712px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 7;
+}
+
+.cards-grid .movie-card .rating-badge--high {
+  background: #3bb33b;
+}
+
+.cards-grid .movie-card .rating-badge--warm {
+  background: #f4a733;
+}
+
+/* Ключевое: постер должен заполнять карточку (иначе появляется "лишняя" черная зона)
+   и затемнение визуально не совпадает с макетом. */
+.cards-grid .movie-card .poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Затемнение внизу постера */
+.cards-grid .movie-card .poster-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /*
+    По макету затемнение — отдельный слой только в нижней части постера,
+    а не на всю высоту. Высота слоя = 222px (как в макете/инспекторе).
+  */
+  top: auto;
+  bottom: 0;
+  height: 222px;
+  background: url("../assets/images/fallback/bg-card-gradient.png") no-repeat center bottom;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.cards-grid .movie-card .card-content {
+  /* По макету (замер): слева 18.6px, справа 27.8px, снизу 91px */
+  padding: 0 27.8px 91px 18.6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.cards-grid .movie-card .card-content h3 {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, var(--default-font-family);
+  font-style: normal;
+  font-size: 29.52px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: left;
+  /* По макету: заголовок переносится на несколько строк, без многоточия */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: break-word;
+}
+
+.cards-grid .movie-card .card-info {
+  color: #ffd700;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.cards-grid .movie-card .card-year {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+
+/* Пагинация сверху */
+.pagination-top {
+  position: absolute;
+  display: flex;
+  gap: 25px;
+  top: 759px;
+  left: auto;
+  right: 323px;
+  z-index: 35;
+}
+
+/* Пагинация */
+.pagination {
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  top: 2600px;
+  left: calc(50% + 100px);
+  transform: translateX(-50%);
+  z-index: 35;
+}
+
+.pagination button,
+.pagination-top button {
+  border: none;
+  background: transparent;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  color: #c0c0c0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  min-width: 24px;
+  height: 29px;
+  transition: color 0.2s;
+}
+
+.pagination button:hover,
+.pagination-top button:hover {
+  color: #000;
+}
+
+.pagination button.active,
+.pagination-top button.active {
+  color: #000;
+}
+
+.pagination button.prev,
+.pagination button.next,
+.pagination-top button.prev,
+.pagination-top button.next {
+  font-size: 24px;
+}
+
+.pagination button:disabled,
+.pagination-top button:disabled {
+  color: #c0c0c0;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+/* Социальные иконки */
+.telegram,
+.vk,
+.yandex-zen,
+.youtube {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.telegram:hover,
+.vk:hover,
+.yandex-zen:hover,
+.youtube:hover {
+  transform: scale(1.08);
+  opacity: 1;
+  /* Фиолетовый ховер по макету */
+  filter: brightness(0) saturate(100%) invert(43%) sepia(77%) saturate(3298%) hue-rotate(242deg) brightness(101%) contrast(101%);
+}
+
+/* Навигационные ссылки */
+.movies:hover,
+.series:hover {
+  opacity: 0.7;
+}
+
+/* Скрываем старые элементы */
+.num-1,
+.num-2,
+.num-3,
+.num-4,
+.num-5 {
+  display: none;
+}
+
+/* Скрываем устаревшие div-карточки, которые заменены grid-разметкой */
+.film-card,
+.film-card-17,
+.film-card-18,
+.film-card-19,
+.film-card-1a,
+.movie-card-static,
+.movie-card-1b,
+.movie-card-1c,
+.movie-card-1d {
+  display: none;
+}
+
+/* Состояние пустого списка */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-state svg {
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* ========== ТЁМНАЯ ТЕМА ========== */
+body.dark-theme .main-container {
+  background: #0d0d14;
+}
+
+body.dark-theme .rectangle {
+  background: rgba(0, 0, 0, 1);
+}
+
+body.dark-theme .theme-label {
+  color: #ffffff;
+}
+
+body.dark-theme .films-16 {
+  color: #ffffff;
+}
+
+body.dark-theme .filter {
+  background: rgba(0, 0, 0, 1);
+  box-shadow: 9px 4px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .genre,
+body.dark-theme .rating,
+body.dark-theme .genre-c,
+body.dark-theme .genre-11 {
+  color: #ffffff;
+}
+
+body.dark-theme .filter-select {
+  background-color: #2a2a45;
+  color: #a0a0b0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2732%27%20height%3D%2732%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.3%27%20d%3D%27M7%2010l5%205%205-5z%27/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+body.dark-theme .filter-input::placeholder {
+  color: #a0a0b0;
+}
+
+body.dark-theme .filter-select.is-open {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20width%3D%2732%27%20height%3D%2732%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23ffffff%27%20fill-opacity%3D%270.3%27%20d%3D%27M7%2014l5-5%205%205z%27/%3E%3C/svg%3E");
+}
+
+body.dark-theme .filter-select:hover {
+  background-color: #3a3a55;
+}
+
+body.dark-theme .reset-btn {
+  background: #c7144d;
+}
+
+body.dark-theme .reset-btn:hover {
+  background-color: #f45c2d;
+}
+
+body.dark-theme .pagination button,
+body.dark-theme .pagination-top button {
+  color: #a0a0b0;
+}
+
+body.dark-theme .pagination button:hover,
+body.dark-theme .pagination-top button:hover,
+body.dark-theme .pagination button.active,
+body.dark-theme .pagination-top button.active {
+  color: #ffffff;
+}
+
+body.dark-theme .toggle-slider {
+  background-color: #ffffff;
+}
+
+body.dark-theme .toggle-slider:before {
+  background-color: #020202;
+}
+
+body.dark-theme .theme-toggle input:checked+.toggle-slider {
+  background-color: #ffffff;
+}
+
+body.dark-theme .vector {
+  filter: invert(1);
+}
+
+body.dark-theme .empty-state {
+  color: #a0a0b0;
+}
+
+
+/* SVG-иконки соцсетей */
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  background: none !important;
+  transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+  color: rgba(133, 91, 252, 1);
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.social-media a svg {
+  display: block;
+}
+
+.social-media a:hover svg {
+  filter: none !important;
+}

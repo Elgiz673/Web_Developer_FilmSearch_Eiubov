@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../style/fonts.css" />
+  <link rel="stylesheet" href="../style/colors.css" />
+  <link rel="stylesheet" href="../style/common.css" />
+  <link rel="stylesheet" href="../style/lists.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фильмы - Что сегодня посмотреть?</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <header class="rectangle">
+      <a class="diplom-logo" href="../index.html" aria-label="На главную">
+        <img src="../assets/icons/remote/bwoRxEsezm.png" alt="Логотип Что сегодня посмотреть"
+          class="diplom-logo__img" />
+      </a>
+      <label class="theme-toggle" for="theme-checkbox">
+        <input type="checkbox" id="theme-checkbox" />
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="theme-label">Тёмная тема</span>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <a class="movies" href="index.html" aria-current="page">Фильмы</a>
+        <a class="series" href="../series_list/index.html">Сериалы</a>
+      </nav>
+    </header>
+    <div class="flex-row-c">
+      <div class="rectangle-1">
+        <div class="rectangle-2">
+          <form id="search-form" class="search-form">
+            <input type="text" id="search-query" class="search-input" placeholder="Какой фильм сегодня посмотреть?" />
+            <button type="submit" class="frame search-btn"><span class="search">Найти</span></button>
+          </form>
+        </div>
+      </div>
+      <form class="filter" id="filter-form" aria-label="Фильтры фильмов">
+        <div class="default-property">
+          <div class="filter-3">
+            <label class="genre" for="genre-filter">Жанр</label>
+            <div class="frame-4">
+              <select id="genre-filter" class="filter-select">
+                <option value="">Все жанры</option>
+                <option value="fantasy">Фэнтези</option>
+                <option value="drama">Драма</option>
+                <option value="action">Боевик</option>
+                <option value="thriller">Триллер</option>
+                <option value="scifi">Фантастика</option>
+                <option value="horror">Ужасы</option>
+                <option value="comedy">Комедия</option>
+              </select>
+            </div>
+          </div>
+          <div class="frame-6">
+            <label class="rating" for="rating-filter">Рейтинг</label>
+            <div class="frame-7">
+              <select id="rating-filter" class="filter-select">
+                <option value="">Выбрать рейтинг</option>
+                <option value="9">от 9</option>
+                <option value="8">от 8</option>
+                <option value="7">от 7</option>
+                <option value="6">от 6</option>
+              </select>
+            </div>
+          </div>
+          <div class="frame-6">
+            <label class="rating" for="director-filter">Режиссёр</label>
+            <div class="frame-7">
+              <input type="text" id="director-filter" class="filter-select filter-input" placeholder="Введите режиссёра"
+                autocomplete="off" />
+            </div>
+          </div>
+          <div class="frame-b">
+            <label class="genre-c" for="country-filter">Страна</label>
+            <div class="frame-d">
+              <select id="country-filter" class="filter-select">
+                <option value="">Все страны</option>
+                <option value="usa">США</option>
+                <option value="uk">Великобритания</option>
+                <option value="russia">Россия</option>
+                <option value="france">Франция</option>
+              </select>
+            </div>
+          </div>
+          <div class="frame-10">
+            <label class="genre-11" for="year-filter">Год выпуска</label>
+            <div class="frame-12">
+              <select id="year-filter" class="filter-select">
+                <option value="">Все годы</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+      </form>
+      <h1 class="films-16">Фильмы</h1>
+      <div class="pagination-top" id="pagination-top"></div>
+      <div class="cards-grid" id="cards-grid"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+    <footer class="rectangle-1e">
+      <span class="author-name">© 2026 Элгиз Эюбов</span>
+      <div class="social-media">
+        <a class="telegram" href="#" aria-label="Telegram">
+          <svg viewBox="0 0 20.3457 19.9639" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.345703" height="19.963867" fill="none"
+            customFrame="#000000" class="telegram">
+            <path
+              d="M18.9722 0.131267L0.950007 8.26238C-0.279933 8.84039 -0.272816 9.64316 0.724352 10.0011L5.35135 11.6899L16.0569 3.78713C16.5631 3.42678 17.0256 3.62059 16.6455 4.01544L7.97183 13.1741L7.9698 13.1741L7.97183 13.1753L7.65268 18.7554C8.12026 18.7554 8.32661 18.5044 8.58886 18.2084L10.8363 15.6514L15.5111 19.6914C16.3731 20.2468 16.9921 19.9614 17.2066 18.7578L20.2753 1.8367C20.5894 0.363176 19.7945 -0.304011 18.9722 0.131267Z"
+              fill="currentColor" fill-rule="nonzero" />
+          </svg>
+        </a>
+        <a class="vk" href="#" aria-label="ВКонтакте">
+          <svg viewBox="0 0 30.7026 19.8335" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="30.702637" height="19.833496" fill="none"
+            customFrame="#000000" class="vk">
+            <path
+              d="M29.9982 1.343C30.2105 0.5695 29.9982 0 28.9812 0L25.6232 0C24.7686 0 24.3746 0.491572 24.161 1.03414C24.161 1.03414 22.4532 5.56186 20.0342 8.50286C19.2513 9.35564 18.8956 9.62628 18.4684 9.62628C18.2548 9.62628 17.9336 9.35564 17.9336 8.58078L17.9336 1.343C17.9336 0.413644 17.6983 0 16.987 0L11.7063 0C11.1729 0 10.8518 0.430644 10.8518 0.840072C10.8518 1.71986 12.0619 1.92386 12.186 4.40014L12.186 9.78064C12.186 10.9608 11.9903 11.1746 11.563 11.1746C10.4245 11.1746 7.65499 6.62578 6.01116 1.42093C5.6926 0.408 5.37023 0 4.51187 0L1.15132 0C0.191886 0 0 0.491572 0 1.03414C0 2.00036 1.13853 6.8 5.30244 13.1481C8.07837 17.4831 11.9865 19.8334 15.5466 19.8334C17.6816 19.8334 17.9452 19.312 17.9452 18.4124L17.9452 15.1356C17.9452 14.0916 18.1473 13.8834 18.824 13.8834C19.3229 13.8834 20.1761 14.1554 22.1692 16.2449C24.4463 18.7226 24.8211 19.8334 26.1029 19.8334L29.4609 19.8334C30.4203 19.8334 30.9013 19.312 30.625 18.2806C30.3206 17.255 29.2332 15.7661 27.7915 13.9995C27.0086 12.9936 25.8342 11.9099 25.4774 11.3674C24.9797 10.6718 25.1217 10.3615 25.4774 9.74243C25.4774 9.74243 29.5709 3.47228 29.9969 1.343L29.9982 1.343Z"
+              fill="currentColor" fill-rule="evenodd" />
+          </svg>
+        </a>
+        <a class="yandex-zen" href="#" aria-label="Дзен">
+          <svg viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="20.000000" height="21.000000" fill="none" customFrame="#000000">
+            <path
+              d="M11.9286 12.525C10.3571 14.2275 10.2429 16.35 10.1071 21C14.2357 21 17.0857 20.985 18.5571 19.485C19.9857 17.94 20 14.805 20 10.6125C15.5714 10.7625 13.55 10.875 11.9286 12.525ZM0 10.6125C0 14.805 0.0142857 17.94 1.44286 19.485C2.91429 20.985 5.76429 21 9.89286 21C9.75 16.35 9.64286 14.2275 8.07143 12.525C6.45 10.875 4.42857 10.755 0 10.6125ZM9.89286 0C5.77143 0 2.91429 0.015 1.44286 1.515C0.0142857 3.06 0 6.195 0 10.3875C4.42857 10.2375 6.45 10.125 8.07143 8.475C9.64286 6.7725 9.75714 4.65 9.89286 0ZM11.9286 8.475C10.3571 6.7725 10.2429 4.65 10.1071 0C14.2357 0 17.0857 0.015 18.5571 1.515C19.9857 3.06 20 6.195 20 10.3875C15.5714 10.2375 13.55 10.125 11.9286 8.475Z"
+              fill="currentColor" fill-rule="nonzero" />
+          </svg>
+        </a>
+        <a class="youtube" href="#" aria-label="YouTube">
+          <svg viewBox="0 0 27 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="27.000000" height="21.000000" fill="none" customFrame="#000000" class="youtube">
+            <path
+              d="M26.4365 3.28041C26.2828 2.64519 25.9814 2.06591 25.5626 1.60053C25.1438 1.13516 24.6221 0.800023 24.0499 0.628662C21.9435 1.19209e-07 13.5 2.12332e-20 13.5 2.12332e-20C13.5 2.12332e-20 5.05647 -1.19209e-07 2.95011 0.625319C2.37763 0.796124 1.85572 1.13107 1.4368 1.59654C1.01788 2.06199 0.716702 2.64157 0.563505 3.27707C-1.19209e-07 5.61783 1.91343e-20 10.5 1.91343e-20 10.5C1.91343e-20 10.5 -1.19209e-07 15.3822 0.563505 17.7196C0.873884 19.0104 1.78996 20.0269 2.95011 20.3713C5.05647 21 13.5 21 13.5 21C13.5 21 21.9435 21 24.0499 20.3713C25.2131 20.0269 26.1261 19.0104 26.4365 17.7196C27 15.3822 27 10.5 27 10.5C27 10.5 27 5.61783 26.4365 3.28041ZM10.8181 14.9809L10.8181 6.01911L17.8092 10.4666L10.8181 14.9809Z"
+              fill="currentColor" fill-rule="nonzero" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="../script/mobile-redirect.js"></script>
+  <script src="../script/api.js"></script>
+  <script src="../script/main.js"></script>
+  <script src="../script/lists.js"></script>
+</body>
+
+</html>

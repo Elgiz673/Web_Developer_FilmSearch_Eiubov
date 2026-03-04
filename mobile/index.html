@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная (моб) - Что сегодня посмотреть?</title>
+  <link rel="stylesheet" href="../style/fonts.css" />
+  <link rel="stylesheet" href="../style/colors.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="../script/mobile-redirect.js"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- ====== Главный экран ====== -->
+    <span class="watch-today">Что сегодня посмотреть?</span>
+    <!-- Якорь ведёт к поисковому блоку ниже, чтобы сохранить навигацию в один тап. -->
+    <a class="vector" href="#search-block" aria-label="Прокрутить к поиску"></a>
+    <div class="flex-row-eb">
+      <div class="movie-card"></div>
+      <button type="button" class="vector-1" aria-label="Предыдущий"></button>
+      <button type="button" class="vector-2" aria-label="Следующий"></button>
+    </div>
+
+    <!-- ====== Поиск ====== -->
+    <div class="rectangle" id="search-block">
+      <div class="rectangle-3">
+        <!-- Нативная форма нужна для корректной отправки по клавише ввода и совместимости текущих обработчиков. -->
+        <form id="search-form" class="search-form" aria-label="Поиск">
+          <input type="text" id="search-query" class="search-input" placeholder="Что сегодня посмотреть?"
+            aria-label="Поисковый запрос" />
+          <button type="submit" class="frame"><span class="find">Найти</span></button>
+          <div class="magnifying-glass" aria-hidden="true"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="about-section">
+      <span class="open-world-cinema">Давайте вместе откроем мир киноискусства!</span>
+      <span class="movie-guide">
+        «Что сегодня посмотреть?» – ваш надежный гид в мире кино. Ищите фильмы
+        и сериалы по названию, жанру, году выпуска или рейтингу, чтобы выбрать
+        идеальное кино для любого настроения. Погрузитесь в подробную информацию
+        о каждом фильме, посмотрите трейлеры и проведите отличный вечер в
+        компании интересного кино.
+      </span>
+    </div>
+
+    <!-- ====== Футер ====== -->
+    <div class="footer-mobile">
+      <span class="copyright">&#169;&#65038; 2026 Элгиз Эюбов</span>
+      <div class="group">
+        <div class="social-media">
+          <a class="telegram" href="#" aria-label="Telegram"></a>
+          <a class="vk-fill" href="#" aria-label="ВКонтакте"></a>
+          <a class="zen-logo-icon" href="#" aria-label="Дзен"></a>
+          <a class="youtube-logo" href="#" aria-label="YouTube"></a>
+        </div>
+        <div class="rectangle-4"></div>
+      </div>
+    </div>
+
+    <!-- ====== Мобильное меню ====== -->
+    <div class="header"></div>
+    <div class="mobile-menu"></div>
+
+    <!-- Важно: эти идентификаторы и классы используются скриптами для открытия/закрытия меню и блокировки фона. -->
+    <button id="burger-menu" class="burger-hit" type="button" aria-label="Открыть меню"></button>
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+    <div class="menu-caption" aria-hidden="true">
+      <span class="menu-caption__text">Меню</span>
+    </div>
+    <nav id="main-nav" class="mobile-nav" aria-label="Меню">
+      <button type="button" class="mobile-nav__close" aria-label="Закрыть меню"
+        onclick="document.getElementById('burger-menu').click()"></button>
+
+      <a href="index.html" class="mobile-nav__link is-active">Главная</a>
+      <a href="./movie_list/index.html" class="mobile-nav__link">Фильмы</a>
+      <a href="./series_list/index.html" class="mobile-nav__link">Сериалы</a>
+
+      <div class="mobile-nav__spacer" aria-hidden="true"></div>
+
+      <div class="mobile-nav__theme" aria-label="Переключатель темы">
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-checkbox" aria-label="Тёмная тема" />
+          <span class="theme-slider" aria-hidden="true"></span>
+        </label>
+        <span class="theme-label">Тёмная тема</span>
+      </div>
+    </nav>
+
+    <div class="rectangle-5"></div>
+  </div>
+
+  <script src="../script/api.js"></script>
+  <script src="../script/main.js"></script>
+  <script src="../script/index.js"></script>
+  <script src="../script/mobile-carousel.js"></script>
+</body>
+
+</html>

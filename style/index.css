@@ -1,0 +1,867 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Для ссылок с фоновыми изображениями (раньше были div-блоки) */
+.diplom-logo,
+.bx-bxl-telegram,
+.akar-icons-vk-fill,
+.yandex-zen-logo-icon,
+.youtube-logo {
+  display: block;
+}
+
+.films,
+.series {
+  cursor: pointer;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1920px;
+  height: 2888px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+.rectangle {
+  position: relative;
+  width: 1920px;
+  height: 111px;
+  margin: 0 0 0 0;
+  background: #ffffff;
+  z-index: 4;
+}
+
+.diplom-logo {
+  position: absolute;
+  width: 342px;
+  height: 70px;
+  top: 14px;
+  left: 310px;
+  background: url(../assets/icons/remote/Q2mEk3fFPr.png) no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+
+.diplom-logo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group {
+  position: absolute;
+  width: 2.92%;
+  height: 27.93%;
+  top: 38.74%;
+  left: 80.26%;
+  background: url(../assets/images/remote/ZVj6YbcSek.png) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 8;
+}
+
+.theme-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  width: 6.67%;
+  height: 21.62%;
+  top: 41.44%;
+  left: 72.55%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+  white-space: nowrap;
+  z-index: 7;
+}
+
+.series {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 21.62%;
+  top: 41.44%;
+  left: 51.51%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
+}
+
+.films {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 21.62%;
+  top: 41.44%;
+  left: 43.7%;
+  color: #000000;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.what-to-watch {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 611px;
+  height: 194px;
+  margin: 212px 0 0 323px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 96.818px;
+  text-align: left;
+  z-index: 2;
+}
+
+.flex-row-a {
+  position: relative;
+  width: 1435px;
+  height: 500px;
+  margin: 317px 0 0 323px;
+  z-index: 30;
+}
+
+.film-card {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  background: none;
+  background-color: #1a1a1a;
+  z-index: 18;
+  overflow: hidden;
+}
+
+.film-card-1 {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 0;
+  left: 458px;
+  background: none;
+  background-color: #1a1a1a;
+  z-index: 19;
+  overflow: hidden;
+}
+
+.film-card-2 {
+  position: absolute;
+  width: 358px;
+  height: 500px;
+  top: 0;
+  left: 916px;
+  background: none;
+  background-color: #1a1a1a;
+  z-index: 20;
+  overflow: hidden;
+}
+
+/* ===== Карточки фильмов на главной (как в макете: рейтинг + затемнение снизу + название) ===== */
+.film-card,
+.film-card-1,
+.film-card-2 {
+  position: absolute;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+/* Затемнение только внизу карточки (высота 222px) */
+.film-card .poster-gradient,
+.film-card-1 .poster-gradient,
+.film-card-2 .poster-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 222px;
+  background: url("../assets/images/fallback/bg-card-gradient.png") no-repeat center bottom;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Убираем дополнительную маску, чтобы затемнение совпадало с макетом */
+.film-card::before,
+.film-card-1::before,
+.film-card-2::before {
+  content: none;
+}
+
+.film-card .card-content,
+.film-card-1 .card-content,
+.film-card-2 .card-content {
+  padding: 0 27.8px 91px 18.6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.film-card .card-content h3,
+.film-card-1 .card-content h3,
+.film-card-2 .card-content h3 {
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, var(--default-font-family);
+  font-style: normal;
+  font-size: 29.52px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: left;
+  white-space: pre-line;
+  /* Поддержка переносов \n по тексту из макета */
+}
+
+.film-card .rating-badge,
+.film-card-1 .rating-badge,
+.film-card-2 .rating-badge {
+  position: absolute;
+  top: 13.56px;
+  left: 13.56px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.25px 10.85px;
+  border-radius: 2.712px;
+  background: #3bb33b;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 20.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 7;
+}
+
+.vector {
+  position: absolute;
+  width: 25.303px;
+  height: 43.535px;
+  top: 228.232px;
+  /* Симметричный отступ до карточек: 96px справа, как и слева */
+  left: 1370px;
+  background: url("../assets/icons/arrows/Vector 8.svg") no-repeat center;
+  background-size: cover;
+  z-index: 30;
+}
+
+.vector-prev {
+  position: absolute;
+  width: 25.303px;
+  height: 43.535px;
+  top: 228.232px;
+  left: -96px;
+  background: url("../assets/icons/arrows/Vector 8.svg") no-repeat center;
+  background-size: cover;
+  transform: scaleX(-1);
+  z-index: 30;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.rectangle-3 {
+  position: relative;
+  width: 1920px;
+  height: 619px;
+  margin: 103px 0 0 0;
+  background: url("../assets/images/fallback/bg-search-section.png") no-repeat center;
+  background-size: cover;
+  z-index: 22;
+  overflow: visible auto;
+}
+
+.rectangle-4 {
+  position: relative;
+  width: 1492px;
+  height: 100px;
+  margin: 254px 0 0 214px;
+  background-color: #ffffff;
+  background-image: none;
+  border-radius: 100px;
+  box-shadow: 0 0 25.226px rgba(0, 0, 0, 0.2);
+  z-index: 23;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  position: absolute;
+  width: 204px;
+  height: 79px;
+  top: 10px;
+  left: 1275px;
+  padding: 25px 65px 25px 65px;
+  background: #020202;
+  z-index: 26;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.find {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 74px;
+  height: 29px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 27;
+}
+
+.magnifying-glass {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 34px;
+  left: 44px;
+  background: url(../assets/icons/remote/JwsvhtBGHO.png) no-repeat center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 25;
+}
+
+.watch-today {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 29px;
+  top: 35px;
+  left: calc(50% - 637px);
+  color: #010101;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 24;
+}
+
+.explore-cinema {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 699px;
+  height: 130px;
+  margin: 151px 0 0 323px;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64.8px;
+  text-align: left;
+  z-index: 29;
+}
+
+.movie-guide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 920px;
+  height: 160px;
+  margin: 29px 0 0 323px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  letter-spacing: 0%;
+  text-align: left;
+  z-index: 28;
+}
+
+.rectangle-5 {
+  position: relative;
+  width: 1920px;
+  height: 212px;
+  margin: 150px 0 0 0;
+  background: #010101;
+  z-index: 11;
+}
+
+.author {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 15.57%;
+  top: 41.98%;
+  left: 16.82%;
+  color: #ffffff;
+  font-family: Inter, var(--default-font-family);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32.5px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 41.98%;
+  left: 74.53%;
+  z-index: 13;
+
+  padding: 10px 16px;
+  background: #000000;
+  border-radius: 10px;
+}
+
+/* Важно: SVG-иконка Дзен не должна обрезаться границами viewBox */
+.social-media a.yandex-zen svg,
+.social-media svg.yandex-zen {
+  overflow: visible;
+}
+
+.social-media a img {
+  display: block;
+}
+
+.bx-bxl-telegram {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 14;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.akar-icons-vk-fill {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 15;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yandex-zen-logo-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 16;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-logo {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 17;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  position: absolute;
+  width: 1920px;
+  height: 620px;
+  top: 111px;
+  left: 50%;
+  background: url("../assets/images/fallback/bg-home-header.png") no-repeat center;
+  background-size: cover;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+.rectangle-6 {
+  position: absolute;
+  width: 1920px;
+  height: 620px;
+  top: 2056px;
+  left: 0;
+  background: url("../assets/images/fallback/bg-home-main.png") no-repeat center;
+  background-size: cover;
+}
+
+/* ========== ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ ========== */
+
+/* Тумблер темной темы */
+.theme-toggle {
+  position: absolute;
+  width: 56px;
+  height: 31px;
+  top: 38.74%;
+  left: 80.26%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 31px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.theme-toggle input:checked+.toggle-slider {
+  background-color: #020202;
+}
+
+.theme-toggle input:checked+.toggle-slider:before {
+  transform: translateX(25px);
+}
+
+/* Кликабельные карточки фильмов */
+.film-card,
+.film-card-1,
+.film-card-2 {
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Сохраняем исходный active-эффект кнопки поиска на главной странице */
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* Постер должен заполнять карточку полностью, без чёрных полей */
+.film-card.poster-fit-cover,
+.film-card-1.poster-fit-cover,
+.film-card-2.poster-fit-cover {
+  background-size: cover;
+}
+
+/* Социальные иконки */
+.telegram,
+.vk,
+.yandex-zen,
+.youtube {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.telegram:hover,
+.vk:hover,
+.yandex-zen:hover,
+.youtube:hover {
+  transform: scale(1.08);
+  opacity: 1;
+  /* Фиолетовый ховер по макету */
+  filter: brightness(0) saturate(100%) invert(43%) sepia(77%) saturate(3298%) hue-rotate(242deg) brightness(101%) contrast(101%);
+}
+
+/* Навигационные ссылки */
+.films:hover,
+.series:hover {
+  opacity: 0.7;
+}
+
+/* Стрелка навигации */
+.vector {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.vector-prev {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.vector:hover {
+  transform: scale(1.1);
+}
+
+.vector-prev:hover {
+  transform: scaleX(-1) scale(1.1);
+}
+
+/* Явный disabled-state для стрелок карусели на главной:
+   светло-серые и некликабельные */
+.vector.disabled,
+.vector-prev.disabled,
+.vector[aria-disabled="true"],
+.vector-prev[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.45;
+  filter: grayscale(1) brightness(1.8);
+}
+
+.vector.disabled:hover,
+.vector-prev.disabled:hover,
+.vector[aria-disabled="true"]:hover,
+.vector-prev[aria-disabled="true"]:hover {
+  transform: none;
+}
+
+/* ========== ТЁМНАЯ ТЕМА ========== */
+body.dark-theme .main-container {
+  background: #0d0d14;
+}
+
+body.dark-theme .rectangle {
+  background: rgba(0, 0, 0, 1);
+}
+
+body.dark-theme .theme-label,
+body.dark-theme .films,
+body.dark-theme .series {
+  color: #ffffff;
+}
+
+body.dark-theme .what-to-watch,
+body.dark-theme .explore-cinema,
+body.dark-theme .movie-guide {
+  color: #ffffff;
+}
+
+body.dark-theme .toggle-slider {
+  background-color: #ffffff;
+}
+
+body.dark-theme .toggle-slider:before {
+  background-color: #020202;
+}
+
+body.dark-theme .theme-toggle input:checked+.toggle-slider {
+  background-color: #ffffff;
+}
+
+/* В светлой теме стрелка должна быть чёрной (по макету).
+   Используем чёрный SVG-ассет; в тёмной теме инвертируем в белый. */
+body:not(.dark-theme) .vector {
+  filter: none;
+}
+
+body:not(.dark-theme) .vector-prev {
+  filter: none;
+}
+
+body.dark-theme .vector {
+  filter: invert(1);
+}
+
+body.dark-theme .vector-prev {
+  filter: invert(1);
+}
+
+
+/* SVG-иконки соцсетей */
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  background: none !important;
+  transition: color 0.2s ease;
+}
+
+.social-media a:hover {
+  color: rgba(133, 91, 252, 1);
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.social-media a svg {
+  display: block;
+}
+
+.social-media a:hover svg {
+  filter: none !important;
+}
+
+/* ========== ДЕСКТОПНАЯ АДАПТАЦИЯ (без scale/zoom) ========== */
+@media (max-width: 1919px) {
+  .main-container {
+    width: 100%;
+    max-width: 1920px;
+  }
+
+  .rectangle,
+  .rectangle-3,
+  .rectangle-5,
+  .header,
+  .rectangle-6 {
+    width: 100%;
+  }
+
+  .diplom-logo {
+    left: clamp(24px, 12vw, 310px);
+  }
+
+  .what-to-watch,
+  .flex-row-a,
+  .explore-cinema,
+  .movie-guide {
+    margin-left: clamp(24px, 12vw, 323px);
+  }
+
+  .flex-row-a {
+    width: min(1435px, calc(100% - (clamp(24px, 12vw, 323px) * 2)));
+  }
+
+  .vector {
+    left: auto;
+    right: 0;
+  }
+
+  .rectangle-4 {
+    margin-left: clamp(24px, 11vw, 214px);
+    width: calc(100% - (clamp(24px, 11vw, 214px) * 2));
+  }
+
+  .frame {
+    left: auto;
+    right: 13px;
+  }
+
+  .social-media {
+    left: auto;
+    right: 10.94%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .what-to-watch {
+    width: min(611px, calc(100% - (clamp(24px, 10vw, 323px) * 2)));
+    font-size: 64px;
+    line-height: 1.2;
+    height: auto;
+    /* Не даём секции схлопнуться ниже исходной высоты,
+       чтобы сохранить стыковку с фиксированным top у .rectangle-6 */
+    min-height: 194px;
+  }
+
+  .explore-cinema {
+    width: min(699px, calc(100% - (clamp(24px, 10vw, 323px) * 2)));
+    height: auto;
+    /* Сохраняем исходную геометрию секции, чтобы не появлялся зазор под футером */
+    min-height: 130px;
+    font-size: 42px;
+    line-height: 1.3;
+  }
+
+  .movie-guide {
+    width: min(920px, calc(100% - (clamp(24px, 10vw, 323px) * 2)));
+    height: auto;
+    /* Не даём блоку становиться ниже базовой высоты макета */
+    min-height: 160px;
+    font-size: 22px;
+  }
+}
